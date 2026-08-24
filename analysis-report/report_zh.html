@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenPI π0.5 × LIBERO 数据分析报告</title>
+<style>
+:root { --ink:#172033; --muted:#617086; --line:#e4e9f0; --card:#fff; --green:#159a6b; --red:#d9534f; --blue:#3484d4; --amber:#e39b22; }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--ink); background:#f4f6f9; font-family:system-ui,'Noto Sans CJK SC','Microsoft YaHei',sans-serif; line-height:1.7; }
+.hero { background:linear-gradient(130deg,#14243a,#214e69 60%,#167c65); color:white; padding:64px max(28px,calc((100vw - 1180px)/2)); }
+.hero h1 { margin:0 0 10px; font-size:clamp(30px,5vw,54px); line-height:1.15; }
+.hero p { max-width:850px; color:#dce9f4; font-size:18px; margin:0; }
+.badge { display:inline-block; margin-bottom:20px; padding:5px 12px; border:1px solid #7de0ba; border-radius:999px; color:#9ff0cf; font-weight:700; }
+main { max-width:1180px; margin:0 auto; padding:32px 22px 70px; }
+h2 { margin:48px 0 18px; font-size:30px; }
+h3 { margin:30px 0 12px; font-size:21px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px; box-shadow:0 5px 18px rgba(18,38,63,.055); }
+.metric { font-size:34px; font-weight:800; line-height:1.15; }
+.metric.green { color:var(--green); } .metric.red { color:var(--red); } .metric.blue { color:var(--blue); } .metric.amber { color:var(--amber); }
+.eyebrow { color:var(--muted); font-size:14px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+.sub { color:var(--muted); font-size:14px; margin-top:6px; }
+.insight { border-left:5px solid var(--blue); background:#edf5fd; padding:16px 20px; border-radius:8px; margin:18px 0; }
+.warning { border-left-color:var(--amber); background:#fff7e6; }
+.figure { background:white; border:1px solid var(--line); border-radius:16px; padding:10px; margin:22px 0; overflow:auto; }
+.figure img { display:block; width:100%; min-width:760px; height:auto; }
+.caption { color:var(--muted); font-size:14px; padding:3px 14px 10px; }
+.table-wrap { overflow:auto; background:white; border:1px solid var(--line); border-radius:14px; margin:15px 0 24px; }
+table { border-collapse:collapse; width:100%; min-width:680px; }
+th,td { padding:12px 14px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
+th:first-child,td:first-child,th:nth-child(2),td:nth-child(2) { text-align:left; }
+th { background:#f7f9fb; font-size:14px; } tr:last-child td { border-bottom:0; }
+code { background:#edf0f4; border-radius:5px; padding:2px 5px; }
+.toc a { color:#236fa1; text-decoration:none; margin-right:18px; white-space:nowrap; }
+.foot { color:var(--muted); font-size:14px; }
+@media print { body { background:white; } .hero { padding:30px; } main { padding:20px; } .card,.figure,.table-wrap { box-shadow:none; break-inside:avoid; } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <span class="badge">最终审计 PASSED · INFRA ERROR 0</span>
+  <h1>OpenPI π0.5 × LIBERO<br>数据分析报告</h1>
+  <p>从 22,030 个可审计 episode 中重新统计总体效果、扰动鲁棒性、难度趋势、source 两极分化和失败集中度。生成时间：2026-08-24T12:02:54.874530Z</p>
+</header>
+<main>
+  <nav class="card toc"><strong>导航：</strong><a href="#overview">总体</a><a href="#libero">LIBERO</a><a href="#plus">Plus</a><a href="#pro">Pro</a><a href="#runtime">运行成本</a><a href="#recommendations">结论</a><a href="#method">方法</a></nav>
+
+  <section class="grid" style="margin-top:18px">
+    <div class="card"><div class="eyebrow">LIBERO official</div><div class="metric green">97.10%</div><div class="sub">1942 / 2000，通过 93.85% 验收线</div></div>
+    <div class="card"><div class="eyebrow">LIBERO-Plus</div><div class="metric blue">83.65%</div><div class="sub">8390 / 10030，0 基础设施错误</div></div>
+    <div class="card"><div class="eyebrow">LIBERO-Pro 可用矩阵</div><div class="metric amber">58.79%</div><div class="sub">4703 / 8000；另 2000 env episodes=N/A</div></div>
+    <div class="card"><div class="eyebrow">Base + LIBERO stats</div><div class="metric red">0 / 2000</div><div class="sub">均为走满步数上限的真实策略失败</div></div>
+  </section>
+
+  <section id="overview">
+    <h2>1. 一页结论</h2>
+    <div class="grid">
+      <div class="card"><strong>微调不可替代</strong><p>Base 权重即使搭配 LIBERO norm stats/assets 仍为 0%，与微调权重差 97.1 个百分点。</p></div>
+      <div class="card"><strong>Plus 失败高度可定位</strong><p>相机视角+机器人初态占 52.1% 失败；难度 4–5 占 68.8% 失败。</p></div>
+      <div class="card"><strong>Pro 的几何转移是主瓶颈</strong><p>位置交换+任务替换只占 50% 评测量，却贡献 89.5% 失败。</p></div>
+      <div class="card"><strong>失败分类干净</strong><p>全部普通策略失败均走满 max_steps；评测连接、EGL 和 checkpoint 错误没有混入失败率。</p></div>
+    </div>
+    <div class="figure"><img src="figures/overview.svg" alt="总体成功率"><div class="caption">细线为 episode 级 Wilson 95% 置信区间。Pro 分母为 8000 个可运行 episodes。</div></div>
+    <div class='table-wrap'><table><thead><tr><th>Benchmark</th><th>协议</th><th>已评/协议</th><th>成功/已评</th><th>成功率</th><th>Wilson 95% CI</th><th>Infra</th></tr></thead><tbody><tr><td>LIBERO official</td><td>pi05_libero</td><td>2000/2000</td><td>1942/2000</td><td>97.10%</td><td>96.27% – 97.75%</td><td>0</td></tr><tr><td>LIBERO Base+stats</td><td>pi05_base + LIBERO assets</td><td>2000/2000</td><td>0/2000</td><td>0.00%</td><td>0.00% – 0.19%</td><td>0</td></tr><tr><td>LIBERO Base-native</td><td>pi05_base native assets</td><td>0/2000 (N/A)</td><td>N/A</td><td>N/A</td><td>N/A</td><td>0</td></tr><tr><td>LIBERO-Plus</td><td>pi05_libero</td><td>10030/10030</td><td>8390/10030</td><td>83.65%</td><td>82.91% – 84.36%</td><td>0</td></tr><tr><td>LIBERO-Pro 可用矩阵</td><td>pi05_libero</td><td>8000/10000</td><td>4703/8000</td><td>58.79%</td><td>57.70% – 59.86%</td><td>0</td></tr></tbody></table></div>
+  </section>
+
+  <section id="libero">
+    <h2>2. 原始 LIBERO：97.10% 通过验收，余下失败集中在少数任务</h2>
+    <div class="figure"><img src="figures/official_suite.svg" alt="Official LIBERO suite 成功率"></div>
+    <div class='table-wrap'><table><thead><tr><th>Suite</th><th>成功/总数</th><th>成功率</th><th>Wilson 95% CI</th></tr></thead><tbody><tr><td>Spatial</td><td>493/500</td><td>98.6%</td><td>97.1% – 99.3%</td></tr><tr><td>Object</td><td>492/500</td><td>98.4%</td><td>96.9% – 99.2%</td></tr><tr><td>Goal</td><td>491/500</td><td>98.2%</td><td>96.6% – 99.1%</td></tr><tr><td>LIBERO-10</td><td>466/500</td><td>93.2%</td><td>90.6% – 95.1%</td></tr></tbody></table></div>
+    <div class="insight"><strong>任务集中性：</strong> `put both moka pots on the stove` 为 30/50，单独贡献 20/58 次官方协议失败；失败最多的前三个任务合计占 51.7%。总体 97.10% 不代表所有任务同样稳定。</div>
+    <p>在同样的 4 suites × 10 tasks × 50 trials 矩阵上，<code>pi05_base + LIBERO assets</code> 为 0/2000。由于所有 Base 失败都走满步数上限，这是能力对照，而不是服务崩溃。Base-native 缺少 LIBERO norm stats，所以严格记为 N/A。</p>
+  </section>
+
+  <section id="plus">
+    <h2>3. LIBERO-Plus：视角、初态和高难度是主要失败源</h2>
+    <p>episode 微平均为 83.65%，四个 suite 等权宏平均为 83.78%。两者很接近，但 category/difficulty 的分母不均匀，不应把不同维度的平均数混为同一指标。</p>
+    <div class="figure"><img src="figures/plus_category.svg" alt="Plus 分类成功率"></div>
+    <div class='table-wrap'><table><thead><tr><th>扰动类别</th><th>成功/总数</th><th>成功率</th><th>失败数</th></tr></thead><tbody><tr><td>背景纹理</td><td>1012/1076</td><td>94.1%</td><td>64</td></tr><tr><td>相机视角</td><td>1160/1599</td><td>72.5%</td><td>439</td></tr><tr><td>语言指令</td><td>1320/1537</td><td>85.9%</td><td>217</td></tr><tr><td>光照条件</td><td>1076/1142</td><td>94.2%</td><td>66</td></tr><tr><td>物体布局</td><td>1296/1525</td><td>85.0%</td><td>229</td></tr><tr><td>机器人初态</td><td>1134/1550</td><td>73.2%</td><td>416</td></tr><tr><td>传感器噪声</td><td>1392/1601</td><td>86.9%</td><td>209</td></tr></tbody></table></div>
+    <div class="figure"><img src="figures/plus_category_suite_heatmap.svg" alt="Plus 类别与 suite 热力图"><div class="caption">同一类别在 suite 间差异很大，因此不能只看类别平均。</div></div>
+    <div class="insight"><strong>交互效应：</strong>背景纹理×Object=99.60%，相机视角×LIBERO-10=55.13%。机器人初态在四个 suite 都仅有 67.97%–77.43%，是更普遍的短板。</div>
+    <div class="figure"><img src="figures/plus_difficulty.svg" alt="Plus 难度趋势"></div>
+    <div class="figure"><img src="figures/plus_failure_concentration.svg" alt="Plus 失败集中度"><div class="caption">红色失败占比明显高于灰色评测占比的类别，是优先修复候选。</div></div>
+    <p>难度 1–5 从 93.86% 单调下降到 61.50%，净降 32.4 个百分点。难度 4–5 仅占 39.6% episodes，但占 68.8% 失败。建议优先建立「相机视角×难度5」和「机器人初态×难度4–5」定向回归集。</p>
+  </section>
+
+  <section id="pro">
+    <h2>4. LIBERO-Pro：语义稳健，几何/任务重组显著脆弱</h2>
+    <div class='table-wrap'><table><thead><tr><th>扰动</th><th>成功/总数</th><th>成功率</th><th>失败数</th></tr></thead><tbody><tr><td>语言语义</td><td>1926/2000</td><td>96.3%</td><td>74</td></tr><tr><td>物体替换</td><td>1729/2000</td><td>86.5%</td><td>271</td></tr><tr><td>位置交换</td><td>562/2000</td><td>28.1%</td><td>1438</td></tr><tr><td>任务替换</td><td>486/2000</td><td>24.3%</td><td>1514</td></tr></tbody></table></div>
+    <div class="figure"><img src="figures/pro_perturbation.svg" alt="Pro 扰动成功率"></div>
+    <div class="figure"><img src="figures/pro_perturbation_suite_heatmap.svg" alt="Pro 扰动与 suite 热力图"></div>
+    <div class="insight"><strong>差异不是小波动：</strong>语义改写在四个 suite 为 93.0%–99.6%；位置交换在 LIBERO-10 只有 9.6%，任务替换在 Object 只有 10.4%。模型更能容忍语言表达变化，但对空间关系和操作目标重组敏感。</div>
+    <div class="figure"><img src="figures/pro_source_distribution.svg" alt="Pro source 级分布"><div class="caption">每个 perturbation 有 40 sources，每 source 有 50 trials。</div></div>
+    <p>位置交换有 20/40 个 source 完全失败，任务替换为 19/40；source 成功率中位数仅 1% / 2%。这是「大量 source 接近彻底失效，少数 source 仍表现很好」的两极分化，所以后续应同时跟踪 micro-average、source 中位数和零成功 source 数。</p>
+    <div class="insight warning"><strong>分母边界：</strong>Pro 快照缺少 4 个 <code>env</code> cells，合计 2000 episodes。报告的 58.79% 仅以 8000 个可运行 episodes 为分母；缺失部分是 N/A，不是失败。</div>
+  </section>
+
+  <section id="runtime">
+    <h2>5. 运行成本：Sensor Noise 是 Plus 时间长尾的核心来源</h2>
+    <div class="figure"><img src="figures/plus_duration_range.svg" alt="Plus 各类别 episode 时长"><div class="caption">蓝点为中位数，黄点为 P90；使用分位数避免均值被极端长尾误导。</div></div>
+    <div class="insight warning"><strong>时间长尾：</strong>Sensor Noise 只占 16.0% Plus episodes，却占 53.5% episode-duration 总和。其中位数 36.6s，P90 177.1s，P99 463.2s；542 条超过 60s，309 条超过 120s。</div>
+    <p>episode duration 在多 GPU/server 下可以并行重叠，所以时长总和不等于实际墙钟时间。该指标适合用于定位类别级运行成本，不应被解释为模型成功率或单 GPU 吞吐率。</p>
+  </section>
+
+  <section id="recommendations">
+    <h2>6. 建议的研发优先级</h2>
+    <div class="grid">
+      <div class="card"><div class="eyebrow">P0</div><h3>增强几何关系泛化</h3><p>针对位置交换、机器人初态和相机视角扩充训练/回归数据；这些是失败最集中的方向。</p></div>
+      <div class="card"><div class="eyebrow">P1</div><h3>单独治理高难度长时序任务</h3><p>Plus 难度5为 61.50%；原始 LIBERO 最难 moka-pot 任务为 60%。对长序列、多物体和状态恢复做专项回归。</p></div>
+      <div class="card"><div class="eyebrow">P1</div><h3>将 source 级指标纳入验收</h3><p>除总成功率外，固定报告 source 中位数、零成功 source 数和扰动×suite 热力图，防止均值掩盖两极分化。</p></div>
+    </div>
+  </section>
+
+  <section id="method">
+    <h2>7. 方法、复现与边界</h2>
+    <ul>
+      <li>数据集：official 2000 + Base+assets 2000 + Plus 10030 + Pro 8000 = <strong>22,030 terminal episodes</strong>。</li>
+      <li>派生统计：<a href="data/metrics.json">metrics.json</a> 和 <a href="data/">CSV 表格</a>；复现脚本：<a href="generate_report.py">generate_report.py</a>。</li>
+      <li>脚本仅使用 Python 标准库，并硬校验矩阵大小、唯一 ID、terminal 状态、错误分类和录像写入状态。</li>
+      <li>Wilson 95% CI 是 episode 级描述，不消除同 task/source 内相关性。Plus 每变体 1 trial；Pro 每 source 50 trials，因此另报 source 分布。</li>
+      <li>Plus 按 suite 使用独立 policy server 分片；环境 seed=7，policy JAX RNG key=0 按 server 独立作用。</li>
+      <li>这是固定 checkpoint/协议下的描述性评测，不是训练方法的因果实验。</li>
+    </ul>
+    <p class="foot">完整最终审计：<a href="../plus-pro/final-audit/report.json">report.json</a> · Markdown 版：<a href="report_zh.md">report_zh.md</a></p>
+  </section>
+</main>
+</body>
+</html>

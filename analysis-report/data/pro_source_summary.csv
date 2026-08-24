@@ -1,0 +1,5 @@
+perturbation,sources,mean_rate,median_rate,q1_rate,q3_rate,min_rate,max_rate,zero_sources,perfect_sources,low_sources_le_20pct,high_sources_ge_80pct
+lan(semantic),40,0.963,0.98,0.96,1.0,0.66,1.0,0,16,0,39
+object,40,0.8644999999999999,0.96,0.94,0.985,0.0,1.0,1,10,2,33
+swap(position),40,0.281,0.01,0.0,0.675,0.0,1.0,20,3,26,9
+task,40,0.243,0.02,0.0,0.345,0.0,1.0,19,1,27,7

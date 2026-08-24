@@ -1,0 +1,6 @@
+scope,planned,attempted_unique,successes,failures,excluded_errors,unknown_errors,policy_denominator,success_rate,macro_success_rate,complete
+libero_spatial,2,2,0,2,0,0,2,0.0,,True
+libero_object,2,2,0,2,0,0,2,0.0,,True
+libero_goal,2,2,0,2,0,0,2,0.0,,True
+libero_10,2,2,0,2,0,0,2,0.0,,True
+total,8,8,0,8,0,0,8,0.0,0.0,True

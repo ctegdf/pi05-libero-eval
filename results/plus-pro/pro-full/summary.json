@@ -1,0 +1,331 @@
+{
+  "benchmark": "pro",
+  "compatibility": {
+    "available_cells": 16,
+    "available_planned_episodes": 8000,
+    "cells": [
+      {
+        "applicability": "available",
+        "perturbation": "object",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_spatial"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "object",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_object"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "object",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_goal"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "object",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_10"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "swap(position)",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_spatial"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "swap(position)",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_object"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "swap(position)",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_goal"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "swap(position)",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_10"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "lan(semantic)",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_spatial"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "lan(semantic)",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_object"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "lan(semantic)",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_goal"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "lan(semantic)",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_10"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "task",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_spatial"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "task",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_object"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "task",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_goal"
+      },
+      {
+        "applicability": "available",
+        "perturbation": "task",
+        "planned_episodes": 500,
+        "reason": null,
+        "source_tasks": 10,
+        "suite": "libero_10"
+      },
+      {
+        "applicability": "N/A",
+        "perturbation": "env",
+        "planned_episodes": 500,
+        "reason": "pre-generated cell is absent",
+        "source_tasks": 0,
+        "suite": "libero_spatial"
+      },
+      {
+        "applicability": "N/A",
+        "perturbation": "env",
+        "planned_episodes": 500,
+        "reason": "pre-generated cell is absent",
+        "source_tasks": 0,
+        "suite": "libero_object"
+      },
+      {
+        "applicability": "N/A",
+        "perturbation": "env",
+        "planned_episodes": 500,
+        "reason": "pre-generated cell is absent",
+        "source_tasks": 0,
+        "suite": "libero_goal"
+      },
+      {
+        "applicability": "N/A",
+        "perturbation": "env",
+        "planned_episodes": 500,
+        "reason": "pre-generated cell is absent",
+        "source_tasks": 0,
+        "suite": "libero_10"
+      }
+    ],
+    "protocol_applicable": false,
+    "protocol_planned_episodes": 10000,
+    "required_cells": 20,
+    "status": "partial_incompatible",
+    "unavailable_cells": [
+      {
+        "applicability": "N/A",
+        "perturbation": "env",
+        "planned_episodes": 500,
+        "reason": "pre-generated cell is absent",
+        "source_tasks": 0,
+        "suite": "libero_spatial"
+      },
+      {
+        "applicability": "N/A",
+        "perturbation": "env",
+        "planned_episodes": 500,
+        "reason": "pre-generated cell is absent",
+        "source_tasks": 0,
+        "suite": "libero_object"
+      },
+      {
+        "applicability": "N/A",
+        "perturbation": "env",
+        "planned_episodes": 500,
+        "reason": "pre-generated cell is absent",
+        "source_tasks": 0,
+        "suite": "libero_goal"
+      },
+      {
+        "applicability": "N/A",
+        "perturbation": "env",
+        "planned_episodes": 500,
+        "reason": "pre-generated cell is absent",
+        "source_tasks": 0,
+        "suite": "libero_10"
+      }
+    ],
+    "unavailable_planned_episodes": 2000
+  },
+  "groups": {
+    "category": {},
+    "difficulty": {},
+    "perturbation": {
+      "lan(semantic)": {
+        "attempted_unique": 2000,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 74,
+        "planned": 2000,
+        "policy_denominator": 2000,
+        "success_rate": 0.963,
+        "successes": 1926,
+        "unknown_errors": 0
+      },
+      "object": {
+        "attempted_unique": 2000,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 271,
+        "planned": 2000,
+        "policy_denominator": 2000,
+        "success_rate": 0.8645,
+        "successes": 1729,
+        "unknown_errors": 0
+      },
+      "swap(position)": {
+        "attempted_unique": 2000,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1438,
+        "planned": 2000,
+        "policy_denominator": 2000,
+        "success_rate": 0.281,
+        "successes": 562,
+        "unknown_errors": 0
+      },
+      "task": {
+        "attempted_unique": 2000,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1514,
+        "planned": 2000,
+        "policy_denominator": 2000,
+        "success_rate": 0.243,
+        "successes": 486,
+        "unknown_errors": 0
+      }
+    },
+    "suite": {
+      "libero_10": {
+        "attempted_unique": 2000,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1067,
+        "planned": 2000,
+        "policy_denominator": 2000,
+        "success_rate": 0.4665,
+        "successes": 933,
+        "unknown_errors": 0
+      },
+      "libero_goal": {
+        "attempted_unique": 2000,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 808,
+        "planned": 2000,
+        "policy_denominator": 2000,
+        "success_rate": 0.596,
+        "successes": 1192,
+        "unknown_errors": 0
+      },
+      "libero_object": {
+        "attempted_unique": 2000,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 897,
+        "planned": 2000,
+        "policy_denominator": 2000,
+        "success_rate": 0.5515,
+        "successes": 1103,
+        "unknown_errors": 0
+      },
+      "libero_spatial": {
+        "attempted_unique": 2000,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 525,
+        "planned": 2000,
+        "policy_denominator": 2000,
+        "success_rate": 0.7375,
+        "successes": 1475,
+        "unknown_errors": 0
+      }
+    }
+  },
+  "integrity": {
+    "issues": [],
+    "missing_videos": 0,
+    "passed": true,
+    "planned": 8000,
+    "records": 8000,
+    "unique_attempt_ids": 8000
+  },
+  "phase": "full",
+  "protocol": "official",
+  "replan": 5,
+  "resize": 224,
+  "seed": 7,
+  "total": {
+    "attempted_unique": 8000,
+    "complete": true,
+    "excluded_errors": 0,
+    "extra_episode_records": 0,
+    "failures": 3297,
+    "macro_suite_success_rate": 0.5878749999999999,
+    "planned": 8000,
+    "policy_denominator": 8000,
+    "success_rate": 0.587875,
+    "successes": 4703,
+    "unknown_errors": 0
+  },
+  "wait_steps": 10
+}

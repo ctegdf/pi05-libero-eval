@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="545" viewBox="0 0 1080 545" role="img" aria-label="LIBERO-Pro：扰动类型 × Suite 成功率">
+<rect width="100%" height="100%" fill="#ffffff" rx="18"/>
+<style>
+text { font-family: system-ui, 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #172033; }
+.title { font-size: 23px; font-weight: 700; }
+.label { font-size: 16px; }
+.small { font-size: 13px; fill: #596579; }
+.value { font-size: 15px; font-weight: 700; }
+</style>
+<text class="title" x="36" y="42">LIBERO-Pro：扰动类型 × Suite 成功率</text>
+<text class="label" x="330.0" y="82" text-anchor="middle">Spatial</text>
+<text class="label" x="520.0" y="82" text-anchor="middle">Object</text>
+<text class="label" x="710.0" y="82" text-anchor="middle">Goal</text>
+<text class="label" x="900.0" y="82" text-anchor="middle">LIBERO-10</text>
+<text class="label" x="219" y="136" text-anchor="end">语言语义</text>
+<rect x="239" y="109" width="182" height="64" rx="9" fill="#269d68"/>
+<text x="330.0" y="134" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">96.2%</text>
+<text class="small" x="330.0" y="155" text-anchor="middle">481/500</text>
+<rect x="429" y="109" width="182" height="64" rx="9" fill="#179a6b"/>
+<text x="520.0" y="134" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">99.6%</text>
+<text class="small" x="520.0" y="155" text-anchor="middle">498/500</text>
+<rect x="619" y="109" width="182" height="64" rx="9" fill="#259d69"/>
+<text x="710.0" y="134" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">96.4%</text>
+<text class="small" x="710.0" y="155" text-anchor="middle">482/500</text>
+<rect x="809" y="109" width="182" height="64" rx="9" fill="#349f66"/>
+<text x="900.0" y="134" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">93.0%</text>
+<text class="small" x="900.0" y="155" text-anchor="middle">465/500</text>
+<text class="label" x="219" y="208" text-anchor="end">物体替换</text>
+<rect x="239" y="181" width="182" height="64" rx="9" fill="#229c69"/>
+<text x="330.0" y="206" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">97.2%</text>
+<text class="small" x="330.0" y="227" text-anchor="middle">486/500</text>
+<rect x="429" y="181" width="182" height="64" rx="9" fill="#359f66"/>
+<text x="520.0" y="206" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">92.8%</text>
+<text class="small" x="520.0" y="227" text-anchor="middle">464/500</text>
+<rect x="619" y="181" width="182" height="64" rx="9" fill="#4ca363"/>
+<text x="710.0" y="206" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">87.8%</text>
+<text class="small" x="710.0" y="227" text-anchor="middle">439/500</text>
+<rect x="809" y="181" width="182" height="64" rx="9" fill="#a4b156"/>
+<text x="900.0" y="206" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">68.0%</text>
+<text class="small" x="900.0" y="227" text-anchor="middle">340/500</text>
+<text class="label" x="219" y="280" text-anchor="end">位置交换</text>
+<rect x="239" y="253" width="182" height="64" rx="9" fill="#f5be4a"/>
+<text x="330.0" y="278" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">49.8%</text>
+<text class="small" x="330.0" y="299" text-anchor="middle">249/500</text>
+<rect x="429" y="253" width="182" height="64" rx="9" fill="#e3794d"/>
+<text x="520.0" y="278" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">17.8%</text>
+<text class="small" x="520.0" y="299" text-anchor="middle">89/500</text>
+<rect x="619" y="253" width="182" height="64" rx="9" fill="#ed9e4b"/>
+<text x="710.0" y="278" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">35.2%</text>
+<text class="small" x="710.0" y="299" text-anchor="middle">176/500</text>
+<rect x="809" y="253" width="182" height="64" rx="9" fill="#de684e"/>
+<text x="900.0" y="278" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">9.6%</text>
+<text class="small" x="900.0" y="299" text-anchor="middle">48/500</text>
+<text class="label" x="219" y="352" text-anchor="end">任务替换</text>
+<rect x="239" y="325" width="182" height="64" rx="9" fill="#edbd4b"/>
+<text x="330.0" y="350" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">51.8%</text>
+<text class="small" x="330.0" y="371" text-anchor="middle">259/500</text>
+<rect x="429" y="325" width="182" height="64" rx="9" fill="#df694e"/>
+<text x="520.0" y="350" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">10.4%</text>
+<text class="small" x="520.0" y="371" text-anchor="middle">52/500</text>
+<rect x="619" y="325" width="182" height="64" rx="9" fill="#e47c4d"/>
+<text x="710.0" y="350" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">19.0%</text>
+<text class="small" x="710.0" y="371" text-anchor="middle">95/500</text>
+<rect x="809" y="325" width="182" height="64" rx="9" fill="#e2754d"/>
+<text x="900.0" y="350" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">16.0%</text>
+<text class="small" x="900.0" y="371" text-anchor="middle">80/500</text>
+<text class="label" x="219" y="424" text-anchor="end">环境扰动（N/A）</text>
+<rect x="239" y="397" width="182" height="64" rx="9" fill="#e8ebf0"/>
+<text x="330.0" y="422" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">N/A</text>
+<rect x="429" y="397" width="182" height="64" rx="9" fill="#e8ebf0"/>
+<text x="520.0" y="422" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">N/A</text>
+<rect x="619" y="397" width="182" height="64" rx="9" fill="#e8ebf0"/>
+<text x="710.0" y="422" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">N/A</text>
+<rect x="809" y="397" width="182" height="64" rx="9" fill="#e8ebf0"/>
+<text x="900.0" y="422" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#172033">N/A</text>
+<text class="small" x="36" y="525">每格固定 500 episodes；位置/任务重组在多个 suite 出现接近彻底失效。</text>
+</svg>

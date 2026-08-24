@@ -1,0 +1,62 @@
+{
+  "executed_wait_steps": 0,
+  "flip_images": true,
+  "groups": {
+    "level": {
+      "LEVEL3": {
+        "attempted_unique": 6000,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 5522,
+        "planned": 6000,
+        "policy_denominator": 6000,
+        "success_rate": 0.07966666666666666,
+        "successes": 478,
+        "unknown_errors": 0
+      }
+    },
+    "prompt_field": {
+      "bddl_language": {
+        "attempted_unique": 6000,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 5522,
+        "planned": 6000,
+        "policy_denominator": 6000,
+        "success_rate": 0.07966666666666666,
+        "successes": 478,
+        "unknown_errors": 0
+      }
+    }
+  },
+  "integrity": {
+    "issues": [],
+    "missing_videos": 0,
+    "passed": true,
+    "planned": 6000,
+    "records": 6000
+  },
+  "level_filter": [
+    "LEVEL3"
+  ],
+  "max_steps": 1200,
+  "note": "released-template protocol (max_steps fixed at 1200 for every task/level); not a reproduction of the LIBERO-X paper's own per-task horizon protocol, and pi05_libero was fine-tuned on standard LIBERO only, so this is a zero-shot transfer evaluation, not the paper's in-domain fine-tuned result.",
+  "phase": "full",
+  "protocol": "pi05-libero-zero-shot",
+  "replan": 5,
+  "resize": 224,
+  "seed": 7,
+  "total": {
+    "attempted_unique": 6000,
+    "complete": true,
+    "excluded_errors": 0,
+    "extra_episode_records": 0,
+    "failures": 5522,
+    "macro_level_success_rate": 0.07966666666666666,
+    "planned": 6000,
+    "policy_denominator": 6000,
+    "success_rate": 0.07966666666666666,
+    "successes": 478,
+    "unknown_errors": 0
+  }
+}

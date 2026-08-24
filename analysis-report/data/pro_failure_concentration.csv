@@ -1,0 +1,5 @@
+perturbation,label,total,failures,episode_share,failure_share
+task,任务替换,2000,1514,0.25,0.4592053381862299
+swap(position),位置交换,2000,1438,0.25,0.4361540794661814
+object,物体替换,2000,271,0.25,0.08219593569912041
+lan(semantic),语言语义,2000,74,0.25,0.022444646648468305

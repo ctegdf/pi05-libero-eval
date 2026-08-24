@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="561" viewBox="0 0 1080 561" role="img" aria-label="LIBERO-Plus：扰动类别成功率">
+<rect width="100%" height="100%" fill="#ffffff" rx="18"/>
+<style>
+text { font-family: system-ui, 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #172033; }
+.title { font-size: 23px; font-weight: 700; }
+.label { font-size: 16px; }
+.small { font-size: 13px; fill: #596579; }
+.value { font-size: 15px; font-weight: 700; }
+</style>
+<text class="title" x="36" y="42">LIBERO-Plus：扰动类别成功率</text>
+<line x1="260.0" y1="64" x2="260.0" y2="516" stroke="#e7ebf1"/>
+<text class="small" x="260.0" y="78" text-anchor="middle">0%</text>
+<line x1="380.0" y1="64" x2="380.0" y2="516" stroke="#e7ebf1"/>
+<text class="small" x="380.0" y="78" text-anchor="middle">20%</text>
+<line x1="500.0" y1="64" x2="500.0" y2="516" stroke="#e7ebf1"/>
+<text class="small" x="500.0" y="78" text-anchor="middle">40%</text>
+<line x1="620.0" y1="64" x2="620.0" y2="516" stroke="#e7ebf1"/>
+<text class="small" x="620.0" y="78" text-anchor="middle">60%</text>
+<line x1="740.0" y1="64" x2="740.0" y2="516" stroke="#e7ebf1"/>
+<text class="small" x="740.0" y="78" text-anchor="middle">80%</text>
+<line x1="860.0" y1="64" x2="860.0" y2="516" stroke="#e7ebf1"/>
+<text class="small" x="860.0" y="78" text-anchor="middle">100%</text>
+<text class="label" x="244" y="115" text-anchor="end">相机视角</text>
+<rect x="260" y="96" width="600" height="27" fill="#f2f4f7" rx="7"/>
+<rect x="260" y="96" width="435.3" height="27" fill="#e39b22" rx="7"/>
+<line x1="681.8" y1="129" x2="708.1" y2="129" stroke="#172033" stroke-width="2"/>
+<line x1="681.8" y1="125" x2="681.8" y2="133" stroke="#172033" stroke-width="2"/>
+<line x1="708.1" y1="125" x2="708.1" y2="133" stroke="#172033" stroke-width="2"/>
+<text class="value" x="872" y="115">72.5% <tspan class="small">(1160/1599)</tspan></text>
+<text class="label" x="244" y="173" text-anchor="end">机器人初态</text>
+<rect x="260" y="154" width="600" height="27" fill="#f2f4f7" rx="7"/>
+<rect x="260" y="154" width="439.0" height="27" fill="#e39b22" rx="7"/>
+<line x1="685.4" y1="187" x2="711.8" y2="187" stroke="#172033" stroke-width="2"/>
+<line x1="685.4" y1="183" x2="685.4" y2="191" stroke="#172033" stroke-width="2"/>
+<line x1="711.8" y1="183" x2="711.8" y2="191" stroke="#172033" stroke-width="2"/>
+<text class="value" x="872" y="173">73.2% <tspan class="small">(1134/1550)</tspan></text>
+<text class="label" x="244" y="231" text-anchor="end">物体布局</text>
+<rect x="260" y="212" width="600" height="27" fill="#f2f4f7" rx="7"/>
+<rect x="260" y="212" width="509.9" height="27" fill="#3484d4" rx="7"/>
+<line x1="758.6" y1="245" x2="780.1" y2="245" stroke="#172033" stroke-width="2"/>
+<line x1="758.6" y1="241" x2="758.6" y2="249" stroke="#172033" stroke-width="2"/>
+<line x1="780.1" y1="241" x2="780.1" y2="249" stroke="#172033" stroke-width="2"/>
+<text class="value" x="872" y="231">85.0% <tspan class="small">(1296/1525)</tspan></text>
+<text class="label" x="244" y="289" text-anchor="end">语言指令</text>
+<rect x="260" y="270" width="600" height="27" fill="#f2f4f7" rx="7"/>
+<rect x="260" y="270" width="515.3" height="27" fill="#3484d4" rx="7"/>
+<line x1="764.3" y1="303" x2="785.2" y2="303" stroke="#172033" stroke-width="2"/>
+<line x1="764.3" y1="299" x2="764.3" y2="307" stroke="#172033" stroke-width="2"/>
+<line x1="785.2" y1="299" x2="785.2" y2="307" stroke="#172033" stroke-width="2"/>
+<text class="value" x="872" y="289">85.9% <tspan class="small">(1320/1537)</tspan></text>
+<text class="label" x="244" y="347" text-anchor="end">传感器噪声</text>
+<rect x="260" y="328" width="600" height="27" fill="#f2f4f7" rx="7"/>
+<rect x="260" y="328" width="521.7" height="27" fill="#3484d4" rx="7"/>
+<line x1="771.2" y1="361" x2="791.0" y2="361" stroke="#172033" stroke-width="2"/>
+<line x1="771.2" y1="357" x2="771.2" y2="365" stroke="#172033" stroke-width="2"/>
+<line x1="791.0" y1="357" x2="791.0" y2="365" stroke="#172033" stroke-width="2"/>
+<text class="value" x="872" y="347">86.9% <tspan class="small">(1392/1601)</tspan></text>
+<text class="label" x="244" y="405" text-anchor="end">背景纹理</text>
+<rect x="260" y="386" width="600" height="27" fill="#f2f4f7" rx="7"/>
+<rect x="260" y="386" width="564.3" height="27" fill="#159a6b" rx="7"/>
+<line x1="814.9" y1="419" x2="831.9" y2="419" stroke="#172033" stroke-width="2"/>
+<line x1="814.9" y1="415" x2="814.9" y2="423" stroke="#172033" stroke-width="2"/>
+<line x1="831.9" y1="415" x2="831.9" y2="423" stroke="#172033" stroke-width="2"/>
+<text class="value" x="872" y="405">94.1% <tspan class="small">(1012/1076)</tspan></text>
+<text class="label" x="244" y="463" text-anchor="end">光照条件</text>
+<rect x="260" y="444" width="600" height="27" fill="#f2f4f7" rx="7"/>
+<rect x="260" y="444" width="565.3" height="27" fill="#159a6b" rx="7"/>
+<line x1="816.3" y1="477" x2="832.6" y2="477" stroke="#172033" stroke-width="2"/>
+<line x1="816.3" y1="473" x2="816.3" y2="481" stroke="#172033" stroke-width="2"/>
+<line x1="832.6" y1="473" x2="832.6" y2="481" stroke="#172033" stroke-width="2"/>
+<text class="value" x="872" y="463">94.2% <tspan class="small">(1076/1142)</tspan></text>
+<text class="small" x="36" y="543">相机视角与机器人初态是成功率最低的两类扰动。</text>
+</svg>

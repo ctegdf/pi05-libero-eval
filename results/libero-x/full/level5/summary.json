@@ -1,0 +1,106 @@
+{
+  "executed_wait_steps": 0,
+  "flip_images": true,
+  "groups": {
+    "level": {
+      "LEVEL5": {
+        "attempted_unique": 8260,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 7607,
+        "planned": 8260,
+        "policy_denominator": 8260,
+        "success_rate": 0.07905569007263923,
+        "successes": 653,
+        "unknown_errors": 0
+      }
+    },
+    "prompt_field": {
+      "L5-1": {
+        "attempted_unique": 1652,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1528,
+        "planned": 1652,
+        "policy_denominator": 1652,
+        "success_rate": 0.07506053268765134,
+        "successes": 124,
+        "unknown_errors": 0
+      },
+      "L5-2": {
+        "attempted_unique": 1652,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1514,
+        "planned": 1652,
+        "policy_denominator": 1652,
+        "success_rate": 0.08353510895883777,
+        "successes": 138,
+        "unknown_errors": 0
+      },
+      "L5-3": {
+        "attempted_unique": 1652,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1519,
+        "planned": 1652,
+        "policy_denominator": 1652,
+        "success_rate": 0.08050847457627118,
+        "successes": 133,
+        "unknown_errors": 0
+      },
+      "L5-4": {
+        "attempted_unique": 1652,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1511,
+        "planned": 1652,
+        "policy_denominator": 1652,
+        "success_rate": 0.08535108958837773,
+        "successes": 141,
+        "unknown_errors": 0
+      },
+      "L5-5": {
+        "attempted_unique": 1652,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1535,
+        "planned": 1652,
+        "policy_denominator": 1652,
+        "success_rate": 0.07082324455205811,
+        "successes": 117,
+        "unknown_errors": 0
+      }
+    }
+  },
+  "integrity": {
+    "issues": [],
+    "missing_videos": 0,
+    "passed": true,
+    "planned": 8260,
+    "records": 8260
+  },
+  "level_filter": [
+    "LEVEL5"
+  ],
+  "max_steps": 1200,
+  "note": "released-template protocol (max_steps fixed at 1200 for every task/level); not a reproduction of the LIBERO-X paper's own per-task horizon protocol, and pi05_libero was fine-tuned on standard LIBERO only, so this is a zero-shot transfer evaluation, not the paper's in-domain fine-tuned result.",
+  "phase": "full",
+  "protocol": "pi05-libero-zero-shot",
+  "replan": 5,
+  "resize": 224,
+  "seed": 7,
+  "total": {
+    "attempted_unique": 8260,
+    "complete": true,
+    "excluded_errors": 0,
+    "extra_episode_records": 0,
+    "failures": 7607,
+    "macro_level_success_rate": 0.07905569007263923,
+    "planned": 8260,
+    "policy_denominator": 8260,
+    "success_rate": 0.07905569007263923,
+    "successes": 653,
+    "unknown_errors": 0
+  }
+}

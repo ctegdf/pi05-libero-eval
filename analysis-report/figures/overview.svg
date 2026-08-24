@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="387" viewBox="0 0 1080 387" role="img" aria-label="总体成功率（不同 benchmark 的分母/构成不同）">
+<rect width="100%" height="100%" fill="#ffffff" rx="18"/>
+<style>
+text { font-family: system-ui, 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #172033; }
+.title { font-size: 23px; font-weight: 700; }
+.label { font-size: 16px; }
+.small { font-size: 13px; fill: #596579; }
+.value { font-size: 15px; font-weight: 700; }
+</style>
+<text class="title" x="36" y="42">总体成功率（不同 benchmark 的分母/构成不同）</text>
+<line x1="260.0" y1="64" x2="260.0" y2="342" stroke="#e7ebf1"/>
+<text class="small" x="260.0" y="78" text-anchor="middle">0%</text>
+<line x1="380.0" y1="64" x2="380.0" y2="342" stroke="#e7ebf1"/>
+<text class="small" x="380.0" y="78" text-anchor="middle">20%</text>
+<line x1="500.0" y1="64" x2="500.0" y2="342" stroke="#e7ebf1"/>
+<text class="small" x="500.0" y="78" text-anchor="middle">40%</text>
+<line x1="620.0" y1="64" x2="620.0" y2="342" stroke="#e7ebf1"/>
+<text class="small" x="620.0" y="78" text-anchor="middle">60%</text>
+<line x1="740.0" y1="64" x2="740.0" y2="342" stroke="#e7ebf1"/>
+<text class="small" x="740.0" y="78" text-anchor="middle">80%</text>
+<line x1="860.0" y1="64" x2="860.0" y2="342" stroke="#e7ebf1"/>
+<text class="small" x="860.0" y="78" text-anchor="middle">100%</text>
+<text class="label" x="244" y="115" text-anchor="end">LIBERO official</text>
+<rect x="260" y="96" width="600" height="27" fill="#f2f4f7" rx="7"/>
+<rect x="260" y="96" width="582.6" height="27" fill="#159a6b" rx="7"/>
+<line x1="837.6" y1="129" x2="846.5" y2="129" stroke="#172033" stroke-width="2"/>
+<line x1="837.6" y1="125" x2="837.6" y2="133" stroke="#172033" stroke-width="2"/>
+<line x1="846.5" y1="125" x2="846.5" y2="133" stroke="#172033" stroke-width="2"/>
+<text class="value" x="872" y="115">97.1% <tspan class="small">(1942/2000)</tspan></text>
+<text class="label" x="244" y="173" text-anchor="end">LIBERO Base+stats</text>
+<rect x="260" y="154" width="600" height="27" fill="#f2f4f7" rx="7"/>
+<rect x="260" y="154" width="0.0" height="27" fill="#d9534f" rx="7"/>
+<line x1="260.0" y1="187" x2="261.2" y2="187" stroke="#172033" stroke-width="2"/>
+<line x1="260.0" y1="183" x2="260.0" y2="191" stroke="#172033" stroke-width="2"/>
+<line x1="261.2" y1="183" x2="261.2" y2="191" stroke="#172033" stroke-width="2"/>
+<text class="value" x="872" y="173">0.0% <tspan class="small">(0/2000)</tspan></text>
+<text class="label" x="244" y="231" text-anchor="end">LIBERO-Plus</text>
+<rect x="260" y="212" width="600" height="27" fill="#f2f4f7" rx="7"/>
+<rect x="260" y="212" width="501.9" height="27" fill="#3484d4" rx="7"/>
+<line x1="757.5" y1="245" x2="766.2" y2="245" stroke="#172033" stroke-width="2"/>
+<line x1="757.5" y1="241" x2="757.5" y2="249" stroke="#172033" stroke-width="2"/>
+<line x1="766.2" y1="241" x2="766.2" y2="249" stroke="#172033" stroke-width="2"/>
+<text class="value" x="872" y="231">83.6% <tspan class="small">(8390/10030)</tspan></text>
+<text class="label" x="244" y="289" text-anchor="end">LIBERO-Pro 可用矩阵</text>
+<rect x="260" y="270" width="600" height="27" fill="#f2f4f7" rx="7"/>
+<rect x="260" y="270" width="352.7" height="27" fill="#e39b22" rx="7"/>
+<line x1="606.2" y1="303" x2="619.2" y2="303" stroke="#172033" stroke-width="2"/>
+<line x1="606.2" y1="299" x2="606.2" y2="307" stroke="#172033" stroke-width="2"/>
+<line x1="619.2" y1="299" x2="619.2" y2="307" stroke="#172033" stroke-width="2"/>
+<text class="value" x="872" y="289">58.8% <tspan class="small">(4703/8000)</tspan></text>
+<text class="small" x="36" y="369">细线为 Wilson 95% CI；Pro 只以 8000 个可运行 episodes 为分母，另有 2000 env episodes=N/A。</text>
+</svg>

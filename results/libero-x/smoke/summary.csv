@@ -1,0 +1,13 @@
+dimension,scope,planned,attempted_unique,successes,failures,excluded_errors,unknown_errors,policy_denominator,success_rate,complete,macro_level_success_rate
+level,LEVEL1,6,6,1,5,0,0,6,0.16666666666666666,True,
+level,LEVEL2,6,6,1,5,0,0,6,0.16666666666666666,True,
+level,LEVEL3,6,6,0,6,0,0,6,0.0,True,
+level,LEVEL4,6,6,0,6,0,0,6,0.0,True,
+level,LEVEL5,5,5,0,5,0,0,5,0.0,True,
+prompt_field,L5-1,1,1,0,1,0,0,1,0.0,True,
+prompt_field,L5-2,1,1,0,1,0,0,1,0.0,True,
+prompt_field,L5-3,1,1,0,1,0,0,1,0.0,True,
+prompt_field,L5-4,1,1,0,1,0,0,1,0.0,True,
+prompt_field,L5-5,1,1,0,1,0,0,1,0.0,True,
+prompt_field,bddl_language,24,24,2,22,0,0,24,0.08333333333333333,True,
+total,total,29,29,2,27,0,0,29,0.06896551724137931,True,0.06666666666666667

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="480" viewBox="0 0 1080 480" role="img" aria-label="LIBERO-Plus：难度升高时成功率单调下降">
+<rect width="100%" height="100%" fill="#ffffff" rx="18"/>
+<style>
+text { font-family: system-ui, 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #172033; }
+.title { font-size: 23px; font-weight: 700; }
+.label { font-size: 16px; }
+.small { font-size: 13px; fill: #596579; }
+.value { font-size: 15px; font-weight: 700; }
+</style>
+<text class="title" x="36" y="42">LIBERO-Plus：难度升高时成功率单调下降</text>
+<line x1="90" y1="385.0" x2="1010" y2="385.0" stroke="#e7ebf1"/>
+<text class="small" x="76" y="390.0" text-anchor="end">0%</text>
+<line x1="90" y1="324.0" x2="1010" y2="324.0" stroke="#e7ebf1"/>
+<text class="small" x="76" y="329.0" text-anchor="end">20%</text>
+<line x1="90" y1="263.0" x2="1010" y2="263.0" stroke="#e7ebf1"/>
+<text class="small" x="76" y="268.0" text-anchor="end">40%</text>
+<line x1="90" y1="202.0" x2="1010" y2="202.0" stroke="#e7ebf1"/>
+<text class="small" x="76" y="207.0" text-anchor="end">60%</text>
+<line x1="90" y1="141.0" x2="1010" y2="141.0" stroke="#e7ebf1"/>
+<text class="small" x="76" y="146.0" text-anchor="end">80%</text>
+<line x1="90" y1="80.0" x2="1010" y2="80.0" stroke="#e7ebf1"/>
+<text class="small" x="76" y="85.0" text-anchor="end">100%</text>
+<polyline points="90.0,98.7 320.0,101.2 550.0,114.8 780.0,132.7 1010.0,197.4" fill="none" stroke="#3484d4" stroke-width="4"/>
+<line x1="90.0" y1="95.5" x2="90.0" y2="102.6" stroke="#172033" stroke-width="2"/>
+<circle cx="90.0" cy="98.7" r="7" fill="#159a6b" stroke="#fff" stroke-width="2"/>
+<text class="value" x="90.0" y="83.7" text-anchor="middle">93.9%</text>
+<text class="label" x="90.0" y="423" text-anchor="middle">难度 1</text>
+<text class="small" x="90.0" y="446" text-anchor="middle">n=1644</text>
+<line x1="320.0" y1="98.2" x2="320.0" y2="104.7" stroke="#172033" stroke-width="2"/>
+<circle cx="320.0" cy="101.2" r="7" fill="#159a6b" stroke="#fff" stroke-width="2"/>
+<text class="value" x="320.0" y="86.2" text-anchor="middle">93.1%</text>
+<text class="label" x="320.0" y="423" text-anchor="middle">难度 2</text>
+<text class="small" x="320.0" y="446" text-anchor="middle">n=2202</text>
+<line x1="550.0" y1="110.9" x2="550.0" y2="119.2" stroke="#172033" stroke-width="2"/>
+<circle cx="550.0" cy="114.8" r="7" fill="#3484d4" stroke="#fff" stroke-width="2"/>
+<text class="value" x="550.0" y="99.8" text-anchor="middle">88.6%</text>
+<text class="label" x="550.0" y="423" text-anchor="middle">难度 3</text>
+<text class="small" x="550.0" y="446" text-anchor="middle">n=2094</text>
+<line x1="780.0" y1="127.7" x2="780.0" y2="138.1" stroke="#172033" stroke-width="2"/>
+<circle cx="780.0" cy="132.7" r="7" fill="#3484d4" stroke="#fff" stroke-width="2"/>
+<text class="value" x="780.0" y="117.7" text-anchor="middle">82.7%</text>
+<text class="label" x="780.0" y="423" text-anchor="middle">难度 4</text>
+<text class="small" x="780.0" y="446" text-anchor="middle">n=1886</text>
+<line x1="1010.0" y1="191.1" x2="1010.0" y2="203.9" stroke="#172033" stroke-width="2"/>
+<circle cx="1010.0" cy="197.4" r="7" fill="#e39b22" stroke="#fff" stroke-width="2"/>
+<text class="value" x="1010.0" y="182.4" text-anchor="middle">61.5%</text>
+<text class="label" x="1010.0" y="423" text-anchor="middle">难度 5</text>
+<text class="small" x="1010.0" y="446" text-anchor="middle">n=2083</text>
+<text class="small" x="36" y="470">未标注难度的 121 episodes（成功率 84.30%，占比 1.21%）不纳入 1–5 趋势线。</text>
+</svg>

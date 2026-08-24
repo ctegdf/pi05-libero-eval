@@ -1,0 +1,215 @@
+{
+  "benchmark": "plus",
+  "groups": {
+    "category": {
+      "Background Textures": {
+        "attempted_unique": 4,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 0,
+        "planned": 4,
+        "policy_denominator": 4,
+        "success_rate": 1.0,
+        "successes": 4,
+        "unknown_errors": 0
+      },
+      "Camera Viewpoints": {
+        "attempted_unique": 4,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 0,
+        "planned": 4,
+        "policy_denominator": 4,
+        "success_rate": 1.0,
+        "successes": 4,
+        "unknown_errors": 0
+      },
+      "Language Instructions": {
+        "attempted_unique": 4,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 0,
+        "planned": 4,
+        "policy_denominator": 4,
+        "success_rate": 1.0,
+        "successes": 4,
+        "unknown_errors": 0
+      },
+      "Light Conditions": {
+        "attempted_unique": 4,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 0,
+        "planned": 4,
+        "policy_denominator": 4,
+        "success_rate": 1.0,
+        "successes": 4,
+        "unknown_errors": 0
+      },
+      "Objects Layout": {
+        "attempted_unique": 4,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1,
+        "planned": 4,
+        "policy_denominator": 4,
+        "success_rate": 0.75,
+        "successes": 3,
+        "unknown_errors": 0
+      },
+      "Robot Initial States": {
+        "attempted_unique": 4,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1,
+        "planned": 4,
+        "policy_denominator": 4,
+        "success_rate": 0.75,
+        "successes": 3,
+        "unknown_errors": 0
+      },
+      "Sensor Noise": {
+        "attempted_unique": 4,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 0,
+        "planned": 4,
+        "policy_denominator": 4,
+        "success_rate": 1.0,
+        "successes": 4,
+        "unknown_errors": 0
+      }
+    },
+    "difficulty": {
+      "1": {
+        "attempted_unique": 9,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1,
+        "planned": 9,
+        "policy_denominator": 9,
+        "success_rate": 0.8888888888888888,
+        "successes": 8,
+        "unknown_errors": 0
+      },
+      "2": {
+        "attempted_unique": 9,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 0,
+        "planned": 9,
+        "policy_denominator": 9,
+        "success_rate": 1.0,
+        "successes": 9,
+        "unknown_errors": 0
+      },
+      "3": {
+        "attempted_unique": 4,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1,
+        "planned": 4,
+        "policy_denominator": 4,
+        "success_rate": 0.75,
+        "successes": 3,
+        "unknown_errors": 0
+      },
+      "4": {
+        "attempted_unique": 5,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 0,
+        "planned": 5,
+        "policy_denominator": 5,
+        "success_rate": 1.0,
+        "successes": 5,
+        "unknown_errors": 0
+      },
+      "5": {
+        "attempted_unique": 1,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 0,
+        "planned": 1,
+        "policy_denominator": 1,
+        "success_rate": 1.0,
+        "successes": 1,
+        "unknown_errors": 0
+      }
+    },
+    "perturbation": {},
+    "suite": {
+      "libero_10": {
+        "attempted_unique": 7,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1,
+        "planned": 7,
+        "policy_denominator": 7,
+        "success_rate": 0.8571428571428571,
+        "successes": 6,
+        "unknown_errors": 0
+      },
+      "libero_goal": {
+        "attempted_unique": 7,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 1,
+        "planned": 7,
+        "policy_denominator": 7,
+        "success_rate": 0.8571428571428571,
+        "successes": 6,
+        "unknown_errors": 0
+      },
+      "libero_object": {
+        "attempted_unique": 7,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 0,
+        "planned": 7,
+        "policy_denominator": 7,
+        "success_rate": 1.0,
+        "successes": 7,
+        "unknown_errors": 0
+      },
+      "libero_spatial": {
+        "attempted_unique": 7,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 0,
+        "planned": 7,
+        "policy_denominator": 7,
+        "success_rate": 1.0,
+        "successes": 7,
+        "unknown_errors": 0
+      }
+    }
+  },
+  "integrity": {
+    "issues": [],
+    "missing_videos": 0,
+    "passed": true,
+    "planned": 28,
+    "records": 36,
+    "unique_attempt_ids": 36
+  },
+  "phase": "smoke",
+  "protocol": "official",
+  "replan": 5,
+  "resize": 224,
+  "seed": 7,
+  "total": {
+    "attempted_unique": 28,
+    "complete": true,
+    "excluded_errors": 0,
+    "extra_episode_records": 0,
+    "failures": 2,
+    "macro_suite_success_rate": 0.9285714285714286,
+    "planned": 28,
+    "policy_denominator": 28,
+    "success_rate": 0.9285714285714286,
+    "successes": 26,
+    "unknown_errors": 0
+  },
+  "wait_steps": 10
+}

@@ -1,0 +1,68 @@
+{
+  "official_full_threshold": {
+    "applies": false,
+    "passed": null,
+    "required": 0.9385
+  },
+  "phase": "smoke",
+  "protocol": "official",
+  "required_commit": "15a9616a",
+  "suites": {
+    "libero_10": {
+      "attempted_unique": 2,
+      "complete": true,
+      "excluded_errors": 0,
+      "failures": 0,
+      "planned": 2,
+      "policy_denominator": 2,
+      "success_rate": 1.0,
+      "successes": 2,
+      "unknown_errors": 0
+    },
+    "libero_goal": {
+      "attempted_unique": 2,
+      "complete": true,
+      "excluded_errors": 0,
+      "failures": 1,
+      "planned": 2,
+      "policy_denominator": 2,
+      "success_rate": 0.5,
+      "successes": 1,
+      "unknown_errors": 0
+    },
+    "libero_object": {
+      "attempted_unique": 2,
+      "complete": true,
+      "excluded_errors": 0,
+      "failures": 0,
+      "planned": 2,
+      "policy_denominator": 2,
+      "success_rate": 1.0,
+      "successes": 2,
+      "unknown_errors": 0
+    },
+    "libero_spatial": {
+      "attempted_unique": 2,
+      "complete": true,
+      "excluded_errors": 0,
+      "failures": 0,
+      "planned": 2,
+      "policy_denominator": 2,
+      "success_rate": 1.0,
+      "successes": 2,
+      "unknown_errors": 0
+    }
+  },
+  "total": {
+    "attempted_unique": 8,
+    "complete": true,
+    "excluded_errors": 0,
+    "failures": 1,
+    "macro_success_rate": 0.875,
+    "planned": 8,
+    "policy_denominator": 8,
+    "success_rate": 0.875,
+    "successes": 7,
+    "unknown_errors": 0
+  }
+}

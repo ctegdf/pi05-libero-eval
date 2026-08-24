@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="430" viewBox="0 0 1080 430" role="img" aria-label="LIBERO-Pro：source 级成功率呈明显两极分化">
+<rect width="100%" height="100%" fill="#ffffff" rx="18"/>
+<style>
+text { font-family: system-ui, 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #172033; }
+.title { font-size: 23px; font-weight: 700; }
+.label { font-size: 16px; }
+.small { font-size: 13px; fill: #596579; }
+.value { font-size: 15px; font-weight: 700; }
+</style>
+<text class="title" x="36" y="42">LIBERO-Pro：source 级成功率呈明显两极分化</text>
+<rect x="220" y="58" width="13" height="13" fill="#d9534f"/><text class="small" x="240" y="70">0–20%</text>
+<rect x="365" y="58" width="13" height="13" fill="#ee9a64"/><text class="small" x="385" y="70">&gt;20–50%</text>
+<rect x="510" y="58" width="13" height="13" fill="#f1c75b"/><text class="small" x="530" y="70">&gt;50–80%</text>
+<rect x="655" y="58" width="13" height="13" fill="#78b98b"/><text class="small" x="675" y="70">&gt;80–&lt;100%</text>
+<rect x="800" y="58" width="13" height="13" fill="#159a6b"/><text class="small" x="820" y="70">100%</text>
+<text class="label" x="214" y="126" text-anchor="end">语言语义</text>
+<rect x="230.0" y="100" width="19.5" height="39" fill="#f1c75b"/>
+<rect x="249.5" y="100" width="448.5" height="39" fill="#78b98b"/>
+<text x="473.8" y="126" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">23</text>
+<rect x="698.0" y="100" width="312.0" height="39" fill="#159a6b"/>
+<text x="854.0" y="126" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">16</text>
+<text class="small" x="1020" y="126">40 sources</text>
+<text class="label" x="214" y="201" text-anchor="end">物体替换</text>
+<rect x="230.0" y="175" width="39.0" height="39" fill="#d9534f"/>
+<text x="249.5" y="201" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">2</text>
+<rect x="269.0" y="175" width="58.5" height="39" fill="#ee9a64"/>
+<text x="298.2" y="201" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">3</text>
+<rect x="327.5" y="175" width="39.0" height="39" fill="#f1c75b"/>
+<text x="347.0" y="201" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">2</text>
+<rect x="366.5" y="175" width="448.5" height="39" fill="#78b98b"/>
+<text x="590.8" y="201" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">23</text>
+<rect x="815.0" y="175" width="195.0" height="39" fill="#159a6b"/>
+<text x="912.5" y="201" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">10</text>
+<text class="small" x="1020" y="201">40 sources</text>
+<text class="label" x="214" y="276" text-anchor="end">位置交换</text>
+<rect x="230.0" y="250" width="507.0" height="39" fill="#d9534f"/>
+<text x="483.5" y="276" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">26</text>
+<rect x="737.0" y="250" width="58.5" height="39" fill="#ee9a64"/>
+<text x="766.2" y="276" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">3</text>
+<rect x="795.5" y="250" width="58.5" height="39" fill="#f1c75b"/>
+<text x="824.8" y="276" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">3</text>
+<rect x="854.0" y="250" width="97.5" height="39" fill="#78b98b"/>
+<text x="902.8" y="276" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">5</text>
+<rect x="951.5" y="250" width="58.5" height="39" fill="#159a6b"/>
+<text x="980.8" y="276" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">3</text>
+<text class="small" x="1020" y="276">40 sources</text>
+<text class="label" x="214" y="351" text-anchor="end">任务替换</text>
+<rect x="230.0" y="325" width="526.5" height="39" fill="#d9534f"/>
+<text x="493.2" y="351" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">27</text>
+<rect x="756.5" y="325" width="78.0" height="39" fill="#ee9a64"/>
+<text x="795.5" y="351" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">4</text>
+<rect x="834.5" y="325" width="39.0" height="39" fill="#f1c75b"/>
+<text x="854.0" y="351" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">2</text>
+<rect x="873.5" y="325" width="117.0" height="39" fill="#78b98b"/>
+<text x="932.0" y="351" text-anchor="middle" style="font-size:14px;font-weight:700;fill:#172033">6</text>
+<rect x="990.5" y="325" width="19.5" height="39" fill="#159a6b"/>
+<text class="small" x="1020" y="351">40 sources</text>
+<text class="small" x="36" y="410">每个 source 含 50 trials；数字为落在该成功率区间的 source 数。</text>
+</svg>

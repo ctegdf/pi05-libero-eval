@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="566" viewBox="0 0 1080 566" role="img" aria-label="LIBERO-Plus：各扰动 episode 时长中位数与 P90">
+<rect width="100%" height="100%" fill="#ffffff" rx="18"/>
+<style>
+text { font-family: system-ui, 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #172033; }
+.title { font-size: 23px; font-weight: 700; }
+.label { font-size: 16px; }
+.small { font-size: 13px; fill: #596579; }
+.value { font-size: 15px; font-weight: 700; }
+</style>
+<text class="title" x="36" y="42">LIBERO-Plus：各扰动 episode 时长中位数与 P90</text>
+<line x1="260.0" y1="65" x2="260.0" y2="511" stroke="#e7ebf1"/>
+<text class="small" x="260.0" y="78" text-anchor="middle">0s</text>
+<line x1="379.2" y1="65" x2="379.2" y2="511" stroke="#e7ebf1"/>
+<text class="small" x="379.2" y="78" text-anchor="middle">30s</text>
+<line x1="498.3" y1="65" x2="498.3" y2="511" stroke="#e7ebf1"/>
+<text class="small" x="498.3" y="78" text-anchor="middle">60s</text>
+<line x1="617.5" y1="65" x2="617.5" y2="511" stroke="#e7ebf1"/>
+<text class="small" x="617.5" y="78" text-anchor="middle">90s</text>
+<line x1="736.7" y1="65" x2="736.7" y2="511" stroke="#e7ebf1"/>
+<text class="small" x="736.7" y="78" text-anchor="middle">120s</text>
+<line x1="855.8" y1="65" x2="855.8" y2="511" stroke="#e7ebf1"/>
+<text class="small" x="855.8" y="78" text-anchor="middle">150s</text>
+<line x1="975.0" y1="65" x2="975.0" y2="511" stroke="#e7ebf1"/>
+<text class="small" x="975.0" y="78" text-anchor="middle">180s</text>
+<text class="label" x="244" y="118" text-anchor="end">光照条件</text>
+<line x1="260" y1="112" x2="327.1" y2="112" stroke="#c8d1dc" stroke-width="8" stroke-linecap="round"/>
+<circle cx="295.9" cy="112" r="7" fill="#3484d4"/>
+<circle cx="327.1" cy="112" r="7" fill="#e39b22"/>
+<text class="small" x="295.9" y="137" text-anchor="middle">M 9.0s</text>
+<text class="small" x="327.1" y="137" text-anchor="middle">P90 16.9s</text>
+<text class="label" x="244" y="176" text-anchor="end">背景纹理</text>
+<line x1="260" y1="170" x2="327.7" y2="170" stroke="#c8d1dc" stroke-width="8" stroke-linecap="round"/>
+<circle cx="295.8" cy="170" r="7" fill="#3484d4"/>
+<circle cx="327.7" cy="170" r="7" fill="#e39b22"/>
+<text class="small" x="295.8" y="195" text-anchor="middle">M 9.0s</text>
+<text class="small" x="327.7" y="195" text-anchor="middle">P90 17.0s</text>
+<text class="label" x="244" y="234" text-anchor="end">语言指令</text>
+<line x1="260" y1="228" x2="329.7" y2="228" stroke="#c8d1dc" stroke-width="8" stroke-linecap="round"/>
+<circle cx="296.2" cy="228" r="7" fill="#3484d4"/>
+<circle cx="329.7" cy="228" r="7" fill="#e39b22"/>
+<text class="small" x="296.2" y="253" text-anchor="middle">M 9.1s</text>
+<text class="small" x="329.7" y="253" text-anchor="middle">P90 17.5s</text>
+<text class="label" x="244" y="292" text-anchor="end">物体布局</text>
+<line x1="260" y1="286" x2="331.5" y2="286" stroke="#c8d1dc" stroke-width="8" stroke-linecap="round"/>
+<circle cx="299.7" cy="286" r="7" fill="#3484d4"/>
+<circle cx="331.5" cy="286" r="7" fill="#e39b22"/>
+<text class="small" x="299.7" y="311" text-anchor="middle">M 10.0s</text>
+<text class="small" x="331.5" y="311" text-anchor="middle">P90 18.0s</text>
+<text class="label" x="244" y="350" text-anchor="end">机器人初态</text>
+<line x1="260" y1="344" x2="332.8" y2="344" stroke="#c8d1dc" stroke-width="8" stroke-linecap="round"/>
+<circle cx="306.7" cy="344" r="7" fill="#3484d4"/>
+<circle cx="332.8" cy="344" r="7" fill="#e39b22"/>
+<text class="small" x="306.7" y="369" text-anchor="middle">M 11.8s</text>
+<text class="small" x="332.8" y="369" text-anchor="middle">P90 18.3s</text>
+<text class="label" x="244" y="408" text-anchor="end">相机视角</text>
+<line x1="260" y1="402" x2="370.5" y2="402" stroke="#c8d1dc" stroke-width="8" stroke-linecap="round"/>
+<circle cx="300.2" cy="402" r="7" fill="#3484d4"/>
+<circle cx="370.5" cy="402" r="7" fill="#e39b22"/>
+<text class="small" x="300.2" y="427" text-anchor="middle">M 10.1s</text>
+<text class="small" x="370.5" y="427" text-anchor="middle">P90 27.8s</text>
+<text class="label" x="244" y="466" text-anchor="end">传感器噪声</text>
+<line x1="260" y1="460" x2="963.6" y2="460" stroke="#c8d1dc" stroke-width="8" stroke-linecap="round"/>
+<circle cx="405.4" cy="460" r="7" fill="#3484d4"/>
+<circle cx="963.6" cy="460" r="7" fill="#e39b22"/>
+<text class="small" x="405.4" y="485" text-anchor="middle">M 36.6s</text>
+<text class="small" x="963.6" y="485" text-anchor="middle">P90 177.1s</text>
+<circle cx="40" cy="539" r="6" fill="#3484d4"/><text class="small" x="55" y="544">中位数</text>
+<circle cx="145" cy="539" r="6" fill="#e39b22"/><text class="small" x="160" y="544">P90</text>
+</svg>

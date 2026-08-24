@@ -1,0 +1,8 @@
+dimension,scope,planned,attempted_unique,successes,failures,excluded_errors,unknown_errors,policy_denominator,success_rate,complete,macro_level_success_rate
+level,LEVEL5,8260,8260,653,7607,0,0,8260,0.07905569007263923,True,
+prompt_field,L5-1,1652,1652,124,1528,0,0,1652,0.07506053268765134,True,
+prompt_field,L5-2,1652,1652,138,1514,0,0,1652,0.08353510895883777,True,
+prompt_field,L5-3,1652,1652,133,1519,0,0,1652,0.08050847457627118,True,
+prompt_field,L5-4,1652,1652,141,1511,0,0,1652,0.08535108958837773,True,
+prompt_field,L5-5,1652,1652,117,1535,0,0,1652,0.07082324455205811,True,
+total,total,8260,8260,653,7607,0,0,8260,0.07905569007263923,True,0.07905569007263923

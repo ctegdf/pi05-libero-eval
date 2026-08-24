@@ -1,0 +1,14 @@
+dimension,scope,planned,attempted_unique,successes,failures,excluded_errors,unknown_errors,policy_denominator,success_rate,complete,macro_suite_success_rate,extra_episode_records,applicability,reason
+suite,libero_10,2000,2000,933,1067,0,0,2000,0.4665,True,,,,
+suite,libero_goal,2000,2000,1192,808,0,0,2000,0.596,True,,,,
+suite,libero_object,2000,2000,1103,897,0,0,2000,0.5515,True,,,,
+suite,libero_spatial,2000,2000,1475,525,0,0,2000,0.7375,True,,,,
+perturbation,lan(semantic),2000,2000,1926,74,0,0,2000,0.963,True,,,,
+perturbation,object,2000,2000,1729,271,0,0,2000,0.8645,True,,,,
+perturbation,swap(position),2000,2000,562,1438,0,0,2000,0.281,True,,,,
+perturbation,task,2000,2000,486,1514,0,0,2000,0.243,True,,,,
+compatibility_cell,env/libero_spatial,500,,,,,,,,False,,,N/A,pre-generated cell is absent
+compatibility_cell,env/libero_object,500,,,,,,,,False,,,N/A,pre-generated cell is absent
+compatibility_cell,env/libero_goal,500,,,,,,,,False,,,N/A,pre-generated cell is absent
+compatibility_cell,env/libero_10,500,,,,,,,,False,,,N/A,pre-generated cell is absent
+total,total,8000,8000,4703,3297,0,0,8000,0.587875,True,0.5878749999999999,0,,

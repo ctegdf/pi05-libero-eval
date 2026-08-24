@@ -1,0 +1,4 @@
+dimension,scope,planned,attempted_unique,successes,failures,excluded_errors,unknown_errors,policy_denominator,success_rate,complete,macro_level_success_rate
+level,LEVEL3,6000,6000,478,5522,0,0,6000,0.07966666666666666,True,
+prompt_field,bddl_language,6000,6000,478,5522,0,0,6000,0.07966666666666666,True,
+total,total,6000,6000,478,5522,0,0,6000,0.07966666666666666,True,0.07966666666666666

@@ -1,0 +1,227 @@
+{
+  "benchmark": "plus",
+  "groups": {
+    "category": {
+      "Background Textures": {
+        "attempted_unique": 1076,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 64,
+        "planned": 1076,
+        "policy_denominator": 1076,
+        "success_rate": 0.9405204460966543,
+        "successes": 1012,
+        "unknown_errors": 0
+      },
+      "Camera Viewpoints": {
+        "attempted_unique": 1599,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 439,
+        "planned": 1599,
+        "policy_denominator": 1599,
+        "success_rate": 0.7254534083802376,
+        "successes": 1160,
+        "unknown_errors": 0
+      },
+      "Language Instructions": {
+        "attempted_unique": 1537,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 217,
+        "planned": 1537,
+        "policy_denominator": 1537,
+        "success_rate": 0.8588158750813273,
+        "successes": 1320,
+        "unknown_errors": 0
+      },
+      "Light Conditions": {
+        "attempted_unique": 1142,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 66,
+        "planned": 1142,
+        "policy_denominator": 1142,
+        "success_rate": 0.9422066549912435,
+        "successes": 1076,
+        "unknown_errors": 0
+      },
+      "Objects Layout": {
+        "attempted_unique": 1525,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 229,
+        "planned": 1525,
+        "policy_denominator": 1525,
+        "success_rate": 0.8498360655737704,
+        "successes": 1296,
+        "unknown_errors": 0
+      },
+      "Robot Initial States": {
+        "attempted_unique": 1550,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 416,
+        "planned": 1550,
+        "policy_denominator": 1550,
+        "success_rate": 0.7316129032258064,
+        "successes": 1134,
+        "unknown_errors": 0
+      },
+      "Sensor Noise": {
+        "attempted_unique": 1601,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 209,
+        "planned": 1601,
+        "policy_denominator": 1601,
+        "success_rate": 0.8694565896314803,
+        "successes": 1392,
+        "unknown_errors": 0
+      }
+    },
+    "difficulty": {
+      "1": {
+        "attempted_unique": 1644,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 101,
+        "planned": 1644,
+        "policy_denominator": 1644,
+        "success_rate": 0.9385644768856448,
+        "successes": 1543,
+        "unknown_errors": 0
+      },
+      "2": {
+        "attempted_unique": 2202,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 153,
+        "planned": 2202,
+        "policy_denominator": 2202,
+        "success_rate": 0.9305177111716622,
+        "successes": 2049,
+        "unknown_errors": 0
+      },
+      "3": {
+        "attempted_unique": 2094,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 239,
+        "planned": 2094,
+        "policy_denominator": 2094,
+        "success_rate": 0.8858643744030563,
+        "successes": 1855,
+        "unknown_errors": 0
+      },
+      "4": {
+        "attempted_unique": 1886,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 326,
+        "planned": 1886,
+        "policy_denominator": 1886,
+        "success_rate": 0.8271474019088016,
+        "successes": 1560,
+        "unknown_errors": 0
+      },
+      "5": {
+        "attempted_unique": 2083,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 802,
+        "planned": 2083,
+        "policy_denominator": 2083,
+        "success_rate": 0.614978396543447,
+        "successes": 1281,
+        "unknown_errors": 0
+      },
+      "None": {
+        "attempted_unique": 121,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 19,
+        "planned": 121,
+        "policy_denominator": 121,
+        "success_rate": 0.8429752066115702,
+        "successes": 102,
+        "unknown_errors": 0
+      }
+    },
+    "perturbation": {},
+    "suite": {
+      "libero_10": {
+        "attempted_unique": 2519,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 474,
+        "planned": 2519,
+        "policy_denominator": 2519,
+        "success_rate": 0.8118300913060739,
+        "successes": 2045,
+        "unknown_errors": 0
+      },
+      "libero_goal": {
+        "attempted_unique": 2591,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 671,
+        "planned": 2591,
+        "policy_denominator": 2591,
+        "success_rate": 0.7410266306445388,
+        "successes": 1920,
+        "unknown_errors": 0
+      },
+      "libero_object": {
+        "attempted_unique": 2518,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 231,
+        "planned": 2518,
+        "policy_denominator": 2518,
+        "success_rate": 0.9082605242255759,
+        "successes": 2287,
+        "unknown_errors": 0
+      },
+      "libero_spatial": {
+        "attempted_unique": 2402,
+        "complete": true,
+        "excluded_errors": 0,
+        "failures": 264,
+        "planned": 2402,
+        "policy_denominator": 2402,
+        "success_rate": 0.8900915903413822,
+        "successes": 2138,
+        "unknown_errors": 0
+      }
+    }
+  },
+  "integrity": {
+    "issues": [],
+    "missing_videos": 0,
+    "passed": true,
+    "planned": 10030,
+    "records": 10030,
+    "unique_attempt_ids": 10030,
+    "unique_policy_outcomes": 10030,
+    "unique_video_paths": 10030
+  },
+  "phase": "full",
+  "policy_rng_initial_key": 0,
+  "policy_rng_scope": "server_process/per-suite",
+  "protocol": "official-checkpoint/multi-server-suite-sharded",
+  "seed": 7,
+  "total": {
+    "attempted_unique": 10030,
+    "complete": true,
+    "excluded_errors": 0,
+    "extra_episode_records": 0,
+    "failures": 1640,
+    "macro_suite_success_rate": 0.8378022091293926,
+    "planned": 10030,
+    "policy_denominator": 10030,
+    "success_rate": 0.8364905284147557,
+    "successes": 8390,
+    "unknown_errors": 0
+  }
+}

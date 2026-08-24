@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.mp4
+runtime/
+logs/
+manifests/
+.DS_Store

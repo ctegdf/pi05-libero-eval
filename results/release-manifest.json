@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "source": "completed pi05_libero evaluation archive",
+  "metadata_files": {
+    "openpi-libero/official-full/episodes.jsonl": 2000,
+    "openpi-libero/official-smoke/episodes.jsonl": 8,
+    "openpi-libero/base-libero-assets-full/episodes.jsonl": 2000,
+    "openpi-libero/base-libero-assets-smoke/episodes.jsonl": 8,
+    "plus-pro/plus-full-merged/episodes.jsonl": 10030,
+    "plus-pro/plus-smoke/episodes.jsonl": 36,
+    "plus-pro/pro-full/episodes.jsonl": 8000,
+    "plus-pro/pro-smoke/episodes.jsonl": 16,
+    "libero-x/full/level1/episodes.jsonl": 6000,
+    "libero-x/full/level2/episodes.jsonl": 6000,
+    "libero-x/full/level3/episodes.jsonl": 6000,
+    "libero-x/full/level4/episodes.jsonl": 8260,
+    "libero-x/full/level5/episodes.jsonl": 8260,
+    "libero-x/smoke/episodes.jsonl": 29
+  },
+  "metadata_sha256": {
+    "openpi-libero/official-full/episodes.jsonl": "b620518fa9992501c18e4536d321f943b33beeb21982dd64f0004a28fbe74e2f",
+    "openpi-libero/official-smoke/episodes.jsonl": "af767b2a816bcc19d6d38095159da22c427ec407217a9c92af41d68db0116ff0",
+    "openpi-libero/base-libero-assets-full/episodes.jsonl": "8b92dd84d19c8018a57542ae173c53889984f4d4c4c4f95ecf1087bb114eee48",
+    "openpi-libero/base-libero-assets-smoke/episodes.jsonl": "00fbe9277cfb289a8e48e2adc7fc285da333e0613de828aa9fd2fd368fc869a0",
+    "plus-pro/plus-full-merged/episodes.jsonl": "906123cda20f785f2c82d1824c867425ecbb05417adaa43193c25922e09555cd",
+    "plus-pro/plus-smoke/episodes.jsonl": "32ad00cdfa32682e3abd304d3aed2ac1267ef45ecd9afaa7412456050cbb8e45",
+    "plus-pro/pro-full/episodes.jsonl": "24a28dfb44879801c621038290404ba4516b90f341bcd460af518fd5a835072c",
+    "plus-pro/pro-smoke/episodes.jsonl": "06fa8b76263efd40f13044b89695047a7347b84ec4da054bd258b237d3f7c3db",
+    "libero-x/full/level1/episodes.jsonl": "7ea0c550f038f404c505ca373c1650a86c782657b9758f92add6f8104ab7d311",
+    "libero-x/full/level2/episodes.jsonl": "7a12a98cf7ea4bc6141a4588b2318313e629451b39611742f12a9406bba95bcc",
+    "libero-x/full/level3/episodes.jsonl": "a6c6a9bc7d1592bfc347a5e8f4cc3e7d923354b5a035fc64adfb18d01c9bbba6",
+    "libero-x/full/level4/episodes.jsonl": "cfb5f08b295d3b8b36e2f389dc0c983b29b57eb907c6effad6bd6f7deb31e940",
+    "libero-x/full/level5/episodes.jsonl": "ecc1e9e0916d1b1bbb5e6eebb7084759c293df2fb9640a7d720d0dffb55b1309",
+    "libero-x/smoke/episodes.jsonl": "e0aa797985aa31c3cc1062a82b2cb6cad9d7ea455cdd7e81eace6af219107bdc"
+  },
+  "missing_video_records": {
+    "plus-pro/plus-smoke/episodes.jsonl": 8
+  },
+  "video_path_policy": "paths are relative to the Hugging Face dataset root",
+  "private_fields_removed": [
+    "trace",
+    "video_original",
+    "video_trace"
+  ]
+}
