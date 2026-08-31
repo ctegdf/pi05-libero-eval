@@ -19,6 +19,8 @@ from release_layout import iter_video_files
 
 
 EXPECTED_VIDEO_COUNT = 56639
+SHARD_SIZE = 5000
+PLUS_FULL_PREFIX = "videos/plus/full/"
 
 
 def sha256_file(path: Path) -> str:
@@ -31,18 +33,17 @@ def sha256_file(path: Path) -> str:
 
 def inventory(source_root: Path, manifest_path: Path | None, skip_sha256: bool) -> list[dict[str, Any]]:
     rows = []
+    plus_full_index = 0
     for _, path, public_path in iter_video_files(source_root):
         row: dict[str, Any] = {"path": public_path, "size": path.stat().st_size}
+        if public_path.startswith(PLUS_FULL_PREFIX):
+            row["_shard_index"] = plus_full_index
+            plus_full_index += 1
         if not skip_sha256:
             row["sha256"] = sha256_file(path)
         rows.append(row)
     if len(rows) != EXPECTED_VIDEO_COUNT:
         raise RuntimeError(f"expected {EXPECTED_VIDEO_COUNT} MP4 files, found {len(rows)}")
-    if manifest_path is not None:
-        manifest_path.parent.mkdir(parents=True, exist_ok=True)
-        with manifest_path.open("w", encoding="utf-8") as stream:
-            for row in rows:
-                stream.write(json.dumps(row, sort_keys=True) + "\n")
     return rows
 
 
@@ -105,6 +106,63 @@ def rows_to_upload(
     return pending
 
 
+def sharded_path(public_path: str, shard_index: int | None) -> str:
+    """Keep Hub directories below the 10,000-file limit."""
+
+    if not public_path.startswith(PLUS_FULL_PREFIX) or shard_index is None:
+        return public_path
+    filename = public_path[len(PLUS_FULL_PREFIX) :]
+    shard = shard_index // SHARD_SIZE
+    return f"{PLUS_FULL_PREFIX}part-{shard:03d}/{filename}"
+
+
+def matches_remote(row: dict[str, Any], remote_path: str, remote: dict[str, dict[str, Any]], allow_size_only: bool) -> bool:
+    remote_row = remote.get(remote_path)
+    if remote_row is None or remote_row.get("size") != row["size"]:
+        return False
+    local_sha256 = row.get("sha256")
+    remote_sha256 = remote_row.get("sha256")
+    if local_sha256 and remote_sha256:
+        return local_sha256 == remote_sha256
+    return allow_size_only
+
+
+def prepare_upload_rows(
+    rows: list[dict[str, Any]],
+    remote: dict[str, dict[str, Any]],
+    *,
+    allow_size_only: bool,
+) -> list[dict[str, Any]]:
+    """Select actual Hub paths and annotate whether each file needs upload."""
+
+    planned: list[dict[str, Any]] = []
+    for row in rows:
+        legacy_path = row["path"]
+        sharded = sharded_path(legacy_path, row.get("_shard_index"))
+        row = dict(row)
+        # Preserve an existing legacy path when present. This keeps already
+        # published metadata links valid; only genuinely new Plus files use a
+        # shard directory.
+        if legacy_path in remote:
+            row["_upload_path"] = legacy_path
+        elif sharded != legacy_path and sharded in remote:
+            row["_upload_path"] = sharded
+        else:
+            row["_upload_path"] = sharded
+        row["_remote_match"] = matches_remote(row, row["_upload_path"], remote, allow_size_only)
+        planned.append(row)
+    return planned
+
+
+def write_manifest(rows: list[dict[str, Any]], manifest_path: Path) -> None:
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    with manifest_path.open("w", encoding="utf-8") as stream:
+        for row in rows:
+            output = {key: value for key, value in row.items() if not key.startswith("_")}
+            output["path"] = row.get("_upload_path", row["path"])
+            stream.write(json.dumps(output, sort_keys=True) + "\n")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source-root", type=Path, required=True)
@@ -123,9 +181,13 @@ def main() -> int:
     if args.batch_size < 1:
         parser.error("--batch-size must be positive")
     source_root = args.source_root.expanduser().resolve()
-    rows = inventory(source_root, args.manifest.expanduser().resolve(), args.skip_sha256)
+    manifest_path = args.manifest.expanduser().resolve()
+    rows = inventory(source_root, manifest_path, args.skip_sha256)
     print(f"validated {len(rows)} MP4 files; manifest={args.manifest}")
     if args.dry_run:
+        planned = prepare_upload_rows(rows, {}, allow_size_only=args.skip_sha256)
+        rows = [row for row in planned if not row["_remote_match"]]
+        write_manifest(rows, manifest_path)
         print(f"dry-run: would upload {sum(row['size'] for row in rows) / (1024**3):.2f} GiB to dataset {args.repo_id}")
         return 0
 
@@ -134,7 +196,9 @@ def main() -> int:
     api.create_repo(repo_id=args.repo_id, repo_type="dataset", exist_ok=True)
     remote = remote_video_inventory(api, args.repo_id) if args.resume else {}
     source_by_public = {public_path: path for _, path, public_path in iter_video_files(source_root)}
-    rows = rows_to_upload(rows, remote, allow_size_only=args.skip_sha256)
+    planned = prepare_upload_rows(rows, remote, allow_size_only=args.skip_sha256)
+    write_manifest(planned, manifest_path)
+    rows = [row for row in planned if not row["_remote_match"]]
     if not rows:
         print("all videos are already present; uploading manifest/card only")
     for start in range(0, len(rows), args.batch_size):
@@ -142,7 +206,7 @@ def main() -> int:
         operations = []
         for row in batch:
             source = source_by_public[row["path"]]
-            operations.append(CommitOperationAdd(path_in_repo=row["path"], path_or_fileobj=str(source)))
+            operations.append(CommitOperationAdd(path_in_repo=row["_upload_path"], path_or_fileobj=str(source)))
         api.create_commit(
             repo_id=args.repo_id,
             repo_type="dataset",
@@ -151,7 +215,7 @@ def main() -> int:
         )
         print(f"uploaded {start + len(batch)}/{len(rows)}", flush=True)
     api.upload_file(
-        path_or_fileobj=str(args.manifest.expanduser().resolve()),
+        path_or_fileobj=str(manifest_path),
         path_in_repo="manifests/video-manifest.jsonl",
         repo_id=args.repo_id,
         repo_type="dataset",
