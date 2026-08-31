@@ -77,6 +77,16 @@ def remote_video_inventory(api: Any, repo_id: str) -> dict[str, dict[str, Any]]:
     return inventory
 
 
+def remote_video_paths(api: Any, repo_id: str) -> dict[str, dict[str, Any]]:
+    """Return remote video paths quickly when SHA-256 is intentionally skipped."""
+
+    return {
+        path: {"size": None, "sha256": None}
+        for path in api.list_repo_files(repo_id=repo_id, repo_type="dataset")
+        if path.startswith("videos/") and path.endswith(".mp4")
+    }
+
+
 def rows_to_upload(
     rows: list[dict[str, Any]],
     remote: dict[str, dict[str, Any]],
@@ -118,7 +128,11 @@ def sharded_path(public_path: str, shard_index: int | None) -> str:
 
 def matches_remote(row: dict[str, Any], remote_path: str, remote: dict[str, dict[str, Any]], allow_size_only: bool) -> bool:
     remote_row = remote.get(remote_path)
-    if remote_row is None or remote_row.get("size") != row["size"]:
+    if remote_row is None:
+        return False
+    if remote_row.get("size") is None and allow_size_only:
+        return True
+    if remote_row.get("size") != row["size"]:
         return False
     local_sha256 = row.get("sha256")
     remote_sha256 = remote_row.get("sha256")
@@ -194,7 +208,10 @@ def main() -> int:
     HfApi, CommitOperationAdd = load_hf()
     api = HfApi()
     api.create_repo(repo_id=args.repo_id, repo_type="dataset", exist_ok=True)
-    remote = remote_video_inventory(api, args.repo_id) if args.resume else {}
+    if args.resume:
+        remote = remote_video_paths(api, args.repo_id) if args.skip_sha256 else remote_video_inventory(api, args.repo_id)
+    else:
+        remote = {}
     source_by_public = {public_path: path for _, path, public_path in iter_video_files(source_root)}
     planned = prepare_upload_rows(rows, remote, allow_size_only=args.skip_sha256)
     write_manifest(planned, manifest_path)
