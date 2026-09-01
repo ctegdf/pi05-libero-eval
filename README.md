@@ -1,5 +1,7 @@
 # pi0.5 on LIBERO: auditable evaluation archive
 
+**Rollout videos:** [Hugging Face dataset](https://huggingface.co/datasets/ctegdf/pi05-libero-rollouts)
+
 Reproducible evaluation harnesses, aggregate results, and sanitized episode
 metadata for the official `pi05_libero` checkpoint on four LIBERO-family
 benchmarks:
@@ -26,9 +28,10 @@ The episode metadata contains 56,647 records. Eight LIBERO-Plus smoke
 records have `video_status=not_recorded`, so they are retained as metadata but
 do not have an MP4 upload.
 
-The complete rendered rollout videos are published separately as a Hugging
-Face dataset. The GitHub repository intentionally contains no checkpoints,
-videos, runtime directories, remote logs, or simulator assets.
+The complete rendered rollout videos are published separately in the
+[Hugging Face dataset](https://huggingface.co/datasets/ctegdf/pi05-libero-rollouts).
+The GitHub repository intentionally contains no checkpoints, videos, runtime
+directories, remote logs, or simulator assets.
 
 ## Contents
 

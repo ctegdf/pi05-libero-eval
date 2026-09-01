@@ -14,9 +14,11 @@ pretty_name: pi0.5 LIBERO evaluation rollouts
 
 # pi0.5 LIBERO evaluation rollouts
 
+**Evaluation code, results, and reports:** [GitHub repository](https://github.com/ctegdf/pi05-libero-eval)
+
 Rendered rollout videos for the public `pi05_libero` evaluation archive. The
-companion GitHub repository contains the evaluation harness, summaries, and
-episode metadata.
+[companion GitHub repository](https://github.com/ctegdf/pi05-libero-eval)
+contains the evaluation harness, summaries, and episode metadata.
 
 ## Coverage
 
