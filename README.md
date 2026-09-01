@@ -1,19 +1,28 @@
 # pi0.5 on LIBERO: auditable evaluation archive
 
-**Rollout videos:** [Hugging Face dataset](https://huggingface.co/datasets/ctegdf/pi05-libero-rollouts)
+[Rollout videos](https://huggingface.co/datasets/ctegdf/pi05-libero-rollouts) |
+[Analysis report](analysis-report/report_zh.md) |
+[Result protocol](docs/MODEL_EVAL_RESULT_PROTOCOL_V1.md) |
+[Release notes](docs/RELEASE_NOTES.md)
 
 Reproducible evaluation harnesses, aggregate results, and sanitized episode
 metadata for the official `pi05_libero` checkpoint on four LIBERO-family
-benchmarks:
+benchmarks. Evaluation code and metadata live in this repository; all 56,639
+rollout videos live in the companion Hugging Face dataset.
 
-| Benchmark | Result | Scope |
-| --- | ---: | --- |
-| LIBERO | 1,942 / 2,000 (97.10%) | official four-suite protocol |
-| LIBERO-Plus | 8,390 / 10,030 (83.65%) | full generated matrix |
-| LIBERO-Pro | 4,703 / 8,000 (58.79%) | 16/20 cells available; 2,000 episodes N/A |
-| LIBERO-X | 2,711 / 34,520 (7.85%) | zero-shot transfer, not paper reproduction |
+## Evaluation results
 
-The 56,639 uploadable MP4s are grouped as follows:
+| Benchmark | Successes | Evaluated episodes | Success rate | Scope |
+| --- | ---: | ---: | ---: | --- |
+| LIBERO | 1,942 | 2,000 | 97.10% | Official four-suite protocol |
+| LIBERO-Plus | 8,390 | 10,030 | 83.65% | Full generated matrix |
+| LIBERO-Pro | 4,703 | 8,000 | 58.79% | 16/20 cells available; 2,000 episodes N/A |
+| LIBERO-X | 2,711 | 34,520 | 7.85% | Zero-shot transfer, not paper reproduction |
+
+## Video inventory
+
+The complete MP4 archive is published in
+[Hugging Face](https://huggingface.co/datasets/ctegdf/pi05-libero-rollouts).
 
 | Benchmark | Full | Smoke | MP4s |
 | --- | ---: | ---: | ---: |
@@ -22,26 +31,48 @@ The 56,639 uploadable MP4s are grouped as follows:
 | LIBERO-Plus | 10,030 | 28 | 10,058 |
 | LIBERO-Pro | 8,000 | 16 | 8,016 |
 | LIBERO-X | 34,520 | 29 | 34,549 |
-| **Total** |  |  | **56,639** |
+| **Total** | **56,550** | **89** | **56,639** |
 
-The episode metadata contains 56,647 records. Eight LIBERO-Plus smoke
-records have `video_status=not_recorded`, so they are retained as metadata but
-do not have an MP4 upload.
+| Inventory item | Count | Reconciliation |
+| --- | ---: | --- |
+| Episode metadata records | 56,647 | All retained episode records |
+| Available MP4 files | 56,639 | Every file is indexed by size and SHA-256 |
+| Metadata-only episodes | 8 | LIBERO-Plus smoke, `video_status=not_recorded` |
 
-The complete rendered rollout videos are published separately in the
-[Hugging Face dataset](https://huggingface.co/datasets/ctegdf/pi05-libero-rollouts).
 The GitHub repository intentionally contains no checkpoints, videos, runtime
 directories, remote logs, or simulator assets.
 
 ## Contents
 
-- `harness/`: standard-library inventory, launch, integrity, and unit-test code
-- `results/`: summaries and sanitized episode metadata; video paths are relative
-- `analysis-report/`: derived tables, figures, and the Chinese/HTML reports
-- `scripts/upload_videos_to_hf.py`: upload an isolated local video tree to a
-  Hugging Face dataset in resumable batches
-- `scripts/stage_videos.py`: create that isolated video tree from the source
-  archive without touching the original archive
+| Path | Purpose |
+| --- | --- |
+| [`harness/`](harness) | Evaluation launchers, inventory checks, integrity checks, and unit tests |
+| [`results/`](results) | Aggregate summaries and sanitized episode metadata with relative video paths |
+| [`analysis-report/`](analysis-report) | Derived tables, figures, Chinese report, and rendered HTML report |
+| [`docs/MODEL_EVAL_RESULT_PROTOCOL_V1.md`](docs/MODEL_EVAL_RESULT_PROTOCOL_V1.md) | Stable result contract for ACT and OpenVLA evaluations |
+| [`scripts/export_to_protocol.py`](scripts/export_to_protocol.py) | Export a new model run into the shared result layout |
+| [`scripts/validate_run.py`](scripts/validate_run.py) | Validate a published run and report every protocol violation |
+| [`scripts/stage_videos.py`](scripts/stage_videos.py) | Build an isolated video tree without modifying the source archive |
+| [`scripts/upload_videos_to_hf.py`](scripts/upload_videos_to_hf.py) | Validate and upload the video inventory in resumable batches |
+
+## Extend with ACT or OpenVLA
+
+The versioned [result protocol](docs/MODEL_EVAL_RESULT_PROTOCOL_V1.md) reserves
+the following layout for new ACT and OpenVLA runs on LIBERO, LIBERO-Plus, and
+LIBERO-Pro:
+
+```text
+results/runs/<model_id>/<benchmark_id>/<run_id>/
+```
+
+Use `scripts/export_to_protocol.py` to convert a harness `episodes.jsonl` into
+the shared layout, then validate it before publication:
+
+```bash
+python3 scripts/export_to_protocol.py --help
+python3 scripts/validate_run.py --run-dir \
+  results/runs/openvla/libero/openvla-libero-full-v1
+```
 
 ## Reproduce the analysis
 
