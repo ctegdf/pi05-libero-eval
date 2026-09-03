@@ -90,14 +90,34 @@ def load_hf():
     return HfApi, CommitOperationAdd
 
 
-def remote_video_inventory(api: Any, repo_id: str) -> dict[str, dict[str, Any]]:
+def remote_video_inventory(api: Any, repo_id: str, scopes: list[str], need_sha256: bool) -> dict[str, dict[str, Any]]:
+    """List only the given `path_in_repo` prefixes (e.g. "videos/openvla",
+    "videos/act"), not the whole dataset tree. A full unscoped listing walks
+    every file in the repo on every call -- including unrelated pi0.5 videos
+    that have nothing to do with this upload -- which gets slower and more
+    fragile against a flaky connection as the dataset grows. A prefix that
+    doesn't exist yet on the Hub (first upload) is treated as empty, not an
+    error.
+
+    `expand=True` pulls extra LFS metadata (sha256, last_commit, security scan
+    results) per file over and above the base listing -- skip it entirely
+    when the caller is only going to do a size-only resume comparison anyway
+    (`--skip-sha256`), since it roughly doubles the per-page request cost for
+    data that will be thrown away."""
     inv: dict[str, dict[str, Any]] = {}
-    for item in api.list_repo_tree(repo_id=repo_id, repo_type="dataset", recursive=True, expand=True):
-        path = getattr(item, "path", None)
-        if not isinstance(path, str) or not path.startswith("videos/") or not path.endswith(".mp4"):
-            continue
-        lfs = getattr(item, "lfs", None)
-        inv[path] = {"size": getattr(item, "size", None), "sha256": getattr(lfs, "sha256", None) if lfs is not None else None}
+    for scope in scopes:
+        try:
+            tree = api.list_repo_tree(repo_id=repo_id, repo_type="dataset", path_in_repo=scope, recursive=True, expand=need_sha256)
+        except Exception as exc:
+            if "not found" in str(exc).lower() or "404" in str(exc):
+                continue
+            raise
+        for item in tree:
+            path = getattr(item, "path", None)
+            if not isinstance(path, str) or not path.endswith(".mp4"):
+                continue
+            lfs = getattr(item, "lfs", None)
+            inv[path] = {"size": getattr(item, "size", None), "sha256": getattr(lfs, "sha256", None) if lfs is not None else None}
     return inv
 
 
@@ -147,7 +167,9 @@ def main() -> int:
     HfApi, CommitOperationAdd = load_hf()
     api = HfApi()
     api.create_repo(repo_id=args.repo_id, repo_type="dataset", exist_ok=True)
-    remote = remote_video_inventory(api, args.repo_id) if args.resume else {}
+    scopes = sorted({row["path"].split("/")[1] for row in rows})
+    scopes = [f"videos/{model_id}" for model_id in scopes]
+    remote = remote_video_inventory(api, args.repo_id, scopes, need_sha256=not args.skip_sha256) if args.resume else {}
     write_manifest(rows, args.manifest)
     pending = [r for r in rows if not matches_remote(r, remote, args.skip_sha256)]
     if not pending:
