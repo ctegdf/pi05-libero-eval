@@ -1,0 +1,52 @@
+{
+  "benchmark": "libero-plus",
+  "by_suite": {
+    "libero_10": {
+      "errors": 0,
+      "failures": 2074,
+      "success_rate": 0.17665740373163955,
+      "successes": 445,
+      "total": 2519,
+      "videos_available": 2519,
+      "videos_missing": 0
+    },
+    "libero_goal": {
+      "errors": 0,
+      "failures": 1932,
+      "success_rate": 0.25434195291393286,
+      "successes": 659,
+      "total": 2591,
+      "videos_available": 2591,
+      "videos_missing": 0
+    },
+    "libero_object": {
+      "errors": 0,
+      "failures": 1761,
+      "success_rate": 0.3006354249404289,
+      "successes": 757,
+      "total": 2518,
+      "videos_available": 2518,
+      "videos_missing": 0
+    },
+    "libero_spatial": {
+      "errors": 0,
+      "failures": 1729,
+      "success_rate": 0.2801831806827644,
+      "successes": 673,
+      "total": 2402,
+      "videos_available": 2402,
+      "videos_missing": 0
+    }
+  },
+  "errors": 0,
+  "failures": 7496,
+  "model_id": "openvla",
+  "phase": "full",
+  "run_id": "openvla-libero-plus-full-v1",
+  "schema_version": 1,
+  "success_rate": 0.252642073778664,
+  "successes": 2534,
+  "total": 10030,
+  "videos_available": 10030,
+  "videos_missing": 0
+}

@@ -1,0 +1,52 @@
+{
+  "artifacts": {
+    "episodes": "episodes.jsonl",
+    "summary_csv": "summary.csv",
+    "summary_json": "summary.json",
+    "video_root": "videos/act/libero/act-libero-full-v1"
+  },
+  "benchmark": "libero",
+  "checkpoint": {
+    "name": "act-final/{libero_spatial,libero_object,libero_goal,libero_10} (4 per-suite checkpoints, trained from scratch, lerobot ACT)",
+    "revision": null,
+    "sha256": null
+  },
+  "counts": {
+    "errors": 0,
+    "expected_episodes": 2000,
+    "failures": 1502,
+    "recorded_episodes": 2000,
+    "successes": 498,
+    "videos_available": 2000,
+    "videos_missing": 0
+  },
+  "implementation": {
+    "config_file": null,
+    "inference_framework": "lerobot 0.1.0 ACTConfig, chunk_size=100, no language conditioning",
+    "repository": "pi05-libero-plus-pro-eval (internal harness fork; not a public repo, no git history recorded)",
+    "repository_revision": null
+  },
+  "model_id": "act",
+  "model_name": "ACT",
+  "notes": "Per-suite ACT policies trained from scratch on official LIBERO training data (lerobot ACTConfig, chunk_size=100, no pretrained backbone). No language conditioning by design (act_runtime.py) -- libero_goal's near-zero success rate (3.0%) is an expected architectural limitation, not a bug. An earlier gripper-sign-inversion bug in action post-processing (fixed before this run) is documented in docs/act-libero-EVAL_REPORT.md section 4.",
+  "phase": "full",
+  "protocol": {
+    "action_horizon": 100,
+    "max_steps_policy": "per-suite fixed: spatial=220 object=280 goal=300 libero_10=520",
+    "seed": 7,
+    "suite_selection": null,
+    "task_selection": null,
+    "trial_count": null
+  },
+  "provenance": {
+    "created_at": "2026-09-03T02:55:40.712892+00:00",
+    "cuda_version": "12.8",
+    "finished_at": "2026-08-27T23:29:03.860845+00:00",
+    "hardware": "8x NVIDIA GeForce RTX 5090 32GB (single GPU per run)",
+    "python_version": "3.8.20 (server), harness client python separate",
+    "started_at": "2026-08-27T12:50:26.970747+00:00"
+  },
+  "run_id": "act-libero-full-v1",
+  "schema_version": 1,
+  "status": "completed"
+}

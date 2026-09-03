@@ -1,0 +1,52 @@
+{
+  "artifacts": {
+    "episodes": "episodes.jsonl",
+    "summary_csv": "summary.csv",
+    "summary_json": "summary.json",
+    "video_root": "videos/openvla/libero/openvla-libero-full-v1"
+  },
+  "benchmark": "libero",
+  "checkpoint": {
+    "name": "openvla/openvla-7b-finetuned-libero-{spatial,object,goal,10} (4 per-suite specialist checkpoints)",
+    "revision": null,
+    "sha256": null
+  },
+  "counts": {
+    "errors": 0,
+    "expected_episodes": 2000,
+    "failures": 617,
+    "recorded_episodes": 2000,
+    "successes": 1383,
+    "videos_available": 2000,
+    "videos_missing": 0
+  },
+  "implementation": {
+    "config_file": null,
+    "inference_framework": "transformers 4.40.1, dinosiglip-vit-so-224px + Llama-2-7b-hf, 256-bin discretized action head",
+    "repository": "pi05-libero-plus-pro-eval (internal harness fork; not a public repo, no git history recorded)",
+    "repository_revision": null
+  },
+  "model_id": "openvla",
+  "model_name": "OpenVLA",
+  "notes": "Per-suite specialist checkpoints (no single unified weight): openvla/openvla-7b-finetuned-libero-{spatial,object,goal,10} (official HF releases). action_horizon=1 (replan every environment step, no action chunk). max_steps per suite: libero_spatial=220, libero_object=280, libero_goal=300, libero_10=520 (same protocol as pi05_libero). Same-distribution evaluation: each checkpoint evaluated only on the suite it was fine-tuned on.",
+  "phase": "full",
+  "protocol": {
+    "action_horizon": 1,
+    "max_steps_policy": "per-suite fixed: spatial=220 object=280 goal=300 libero_10=520",
+    "seed": 0,
+    "suite_selection": null,
+    "task_selection": null,
+    "trial_count": null
+  },
+  "provenance": {
+    "created_at": "2026-09-03T02:55:03.292361+00:00",
+    "cuda_version": "12.8",
+    "finished_at": "2026-08-27T19:43:47.225235+00:00",
+    "hardware": "8x NVIDIA GeForce RTX 5090 32GB (single GPU per run)",
+    "python_version": "3.8.20 (server), harness client python separate",
+    "started_at": "2026-08-26T13:25:01.244664+00:00"
+  },
+  "run_id": "openvla-libero-full-v1",
+  "schema_version": 1,
+  "status": "completed"
+}

@@ -1,0 +1,5 @@
+suite,total,successes,failures,errors,success_rate,videos_available,videos_missing
+libero_10,2519,282,2237,0,0.11194918618499404,2519,0
+libero_goal,2591,81,2510,0,0.03126206098031648,2591,0
+libero_object,2518,566,1952,0,0.22478157267672755,2518,0
+libero_spatial,2402,381,2021,0,0.15861781848459616,2402,0

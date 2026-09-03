@@ -1,0 +1,52 @@
+{
+  "artifacts": {
+    "episodes": "episodes.jsonl",
+    "summary_csv": "summary.csv",
+    "summary_json": "summary.json",
+    "video_root": "videos/act/libero-plus/act-libero-plus-full-v1"
+  },
+  "benchmark": "libero-plus",
+  "checkpoint": {
+    "name": "act-final/{libero_spatial,libero_object,libero_goal,libero_10} (4 per-suite checkpoints, trained from scratch, lerobot ACT)",
+    "revision": null,
+    "sha256": null
+  },
+  "counts": {
+    "errors": 0,
+    "expected_episodes": 10030,
+    "failures": 8720,
+    "recorded_episodes": 10030,
+    "successes": 1310,
+    "videos_available": 10030,
+    "videos_missing": 0
+  },
+  "implementation": {
+    "config_file": null,
+    "inference_framework": "lerobot 0.1.0 ACTConfig, chunk_size=100, no language conditioning",
+    "repository": "pi05-libero-plus-pro-eval (internal harness fork; not a public repo, no git history recorded)",
+    "repository_revision": null
+  },
+  "model_id": "act",
+  "model_name": "ACT",
+  "notes": "Zero-shot transfer, same 4 per-suite ACT checkpoints as libero. See docs/act-plus-pro-EVAL_REPORT.md -- note the 'Language Instructions' perturbation category score does not reflect language robustness (ACT has no language conditioning).",
+  "phase": "full",
+  "protocol": {
+    "action_horizon": 100,
+    "max_steps_policy": "per-suite fixed: spatial=220 object=280 goal=300 libero_10=520",
+    "seed": 7,
+    "suite_selection": null,
+    "task_selection": null,
+    "trial_count": null
+  },
+  "provenance": {
+    "created_at": "2026-09-03T02:55:59.798049+00:00",
+    "cuda_version": "12.8",
+    "finished_at": "2026-09-01T15:38:53.872050+00:00",
+    "hardware": "8x NVIDIA GeForce RTX 5090 32GB (single GPU per run)",
+    "python_version": "3.8.20 (server), harness client python separate",
+    "started_at": "2026-08-27T23:29:53.133106+00:00"
+  },
+  "run_id": "act-libero-plus-full-v1",
+  "schema_version": 1,
+  "status": "completed"
+}

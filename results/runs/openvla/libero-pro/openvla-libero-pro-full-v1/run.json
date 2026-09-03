@@ -1,0 +1,52 @@
+{
+  "artifacts": {
+    "episodes": "episodes.jsonl",
+    "summary_csv": "summary.csv",
+    "summary_json": "summary.json",
+    "video_root": "videos/openvla/libero-pro/openvla-libero-pro-full-v1"
+  },
+  "benchmark": "libero-pro",
+  "checkpoint": {
+    "name": "openvla/openvla-7b-finetuned-libero-{spatial,object,goal,10} (4 per-suite specialist checkpoints)",
+    "revision": null,
+    "sha256": null
+  },
+  "counts": {
+    "errors": 0,
+    "expected_episodes": 8000,
+    "failures": 5293,
+    "recorded_episodes": 8000,
+    "successes": 2707,
+    "videos_available": 8000,
+    "videos_missing": 0
+  },
+  "implementation": {
+    "config_file": null,
+    "inference_framework": "transformers 4.40.1, dinosiglip-vit-so-224px + Llama-2-7b-hf, 256-bin discretized action head",
+    "repository": "pi05-libero-plus-pro-eval (internal harness fork; not a public repo, no git history recorded)",
+    "repository_revision": null
+  },
+  "model_id": "openvla",
+  "model_name": "OpenVLA",
+  "notes": "Zero-shot transfer, same checkpoints as libero/libero-plus. LIBERO-Pro's env perturbation cells are pre-generated-absent for all 4 suites (2000/10000 episodes N/A, same as pi05_libero's own LIBERO-Pro run) -- expected_episodes reflects the 8000 available cells only. See docs/openvla-plus-pro-EVAL_REPORT.md for the swap(position) 0/2000 catastrophic-failure finding.",
+  "phase": "full",
+  "protocol": {
+    "action_horizon": 1,
+    "max_steps_policy": "per-suite fixed: spatial=220 object=280 goal=300 libero_10=520",
+    "seed": 0,
+    "suite_selection": null,
+    "task_selection": null,
+    "trial_count": null
+  },
+  "provenance": {
+    "created_at": "2026-09-03T02:55:35.754000+00:00",
+    "cuda_version": "12.8",
+    "finished_at": "2026-09-02T21:43:51.691143+00:00",
+    "hardware": "8x NVIDIA GeForce RTX 5090 32GB (single GPU per run)",
+    "python_version": "3.8.20 (server), harness client python separate",
+    "started_at": "2026-08-28T02:01:00.037966+00:00"
+  },
+  "run_id": "openvla-libero-pro-full-v1",
+  "schema_version": 1,
+  "status": "completed"
+}

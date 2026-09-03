@@ -1,0 +1,52 @@
+{
+  "benchmark": "libero-plus",
+  "by_suite": {
+    "libero_10": {
+      "errors": 0,
+      "failures": 2237,
+      "success_rate": 0.11194918618499404,
+      "successes": 282,
+      "total": 2519,
+      "videos_available": 2519,
+      "videos_missing": 0
+    },
+    "libero_goal": {
+      "errors": 0,
+      "failures": 2510,
+      "success_rate": 0.03126206098031648,
+      "successes": 81,
+      "total": 2591,
+      "videos_available": 2591,
+      "videos_missing": 0
+    },
+    "libero_object": {
+      "errors": 0,
+      "failures": 1952,
+      "success_rate": 0.22478157267672755,
+      "successes": 566,
+      "total": 2518,
+      "videos_available": 2518,
+      "videos_missing": 0
+    },
+    "libero_spatial": {
+      "errors": 0,
+      "failures": 2021,
+      "success_rate": 0.15861781848459616,
+      "successes": 381,
+      "total": 2402,
+      "videos_available": 2402,
+      "videos_missing": 0
+    }
+  },
+  "errors": 0,
+  "failures": 8720,
+  "model_id": "act",
+  "phase": "full",
+  "run_id": "act-libero-plus-full-v1",
+  "schema_version": 1,
+  "success_rate": 0.13060817547357925,
+  "successes": 1310,
+  "total": 10030,
+  "videos_available": 10030,
+  "videos_missing": 0
+}

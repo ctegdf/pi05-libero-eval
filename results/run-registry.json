@@ -1,0 +1,53 @@
+{
+  "runs": [
+    {
+      "benchmark": "libero",
+      "model_id": "act",
+      "path": "results/runs/act/libero/act-libero-full-v1",
+      "phase": "full",
+      "run_id": "act-libero-full-v1",
+      "status": "completed"
+    },
+    {
+      "benchmark": "libero-plus",
+      "model_id": "act",
+      "path": "results/runs/act/libero-plus/act-libero-plus-full-v1",
+      "phase": "full",
+      "run_id": "act-libero-plus-full-v1",
+      "status": "completed"
+    },
+    {
+      "benchmark": "libero-pro",
+      "model_id": "act",
+      "path": "results/runs/act/libero-pro/act-libero-pro-full-v1",
+      "phase": "full",
+      "run_id": "act-libero-pro-full-v1",
+      "status": "completed"
+    },
+    {
+      "benchmark": "libero",
+      "model_id": "openvla",
+      "path": "results/runs/openvla/libero/openvla-libero-full-v1",
+      "phase": "full",
+      "run_id": "openvla-libero-full-v1",
+      "status": "completed"
+    },
+    {
+      "benchmark": "libero-plus",
+      "model_id": "openvla",
+      "path": "results/runs/openvla/libero-plus/openvla-libero-plus-full-v1",
+      "phase": "full",
+      "run_id": "openvla-libero-plus-full-v1",
+      "status": "completed"
+    },
+    {
+      "benchmark": "libero-pro",
+      "model_id": "openvla",
+      "path": "results/runs/openvla/libero-pro/openvla-libero-pro-full-v1",
+      "phase": "full",
+      "run_id": "openvla-libero-pro-full-v1",
+      "status": "completed"
+    }
+  ],
+  "schema_version": 1
+}
